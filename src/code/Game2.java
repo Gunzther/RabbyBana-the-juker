@@ -10,31 +10,34 @@ import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
 
-public class Game extends Canvas implements Runnable,KeyListener {
+public class Game2 extends Canvas implements Runnable,KeyListener {
 	
 	private static final long serialVersionUID = 1L; 
 	private boolean isRunning = false;
 	
-	public static final int WIDTH = 800,HEIGTH = 580;
+	public static final int WIDTH = 800,HEIGTH = 640;
 	public static final String TITLE = "Chasing-Game-SKE";
 	
 	private Thread thread;
 	
-	public static Player1 player1;
-	public static Player2 player2;
-	public static BotSheet botSheet;
+	public static Player player;
+	public static Bot enemy;
+	public static Level2 level;
+	public static BotSheet enemySheet;
+	public static BotSheet playerSheet;
 	
-	public Game() {
+	public Game2() {
 		Dimension dimension = new Dimension(WIDTH, HEIGTH);
 		setPreferredSize(dimension);
 		setMinimumSize(dimension);
 		setMaximumSize(dimension);
 		
 		addKeyListener(this);
-		player1 = new Player1(Game.WIDTH/2,Game.HEIGTH/2);
-		player2 = new Player2(Game.WIDTH/2,Game.HEIGTH/2);
-//		level = new Level("/map/map_pacman3.png");
-//		botSheet = new BotSheet("/bot/bot.png");
+		player = new Player(Game2.WIDTH/2,Game2.HEIGTH/2);
+		enemy = new Bot(Game2.WIDTH/2,Game2.HEIGTH/2);
+		level = new Level2("/bot/map_chasing4.png");
+		enemySheet = new BotSheet("/bot/tui.png");
+		playerSheet = new BotSheet("/bot/banana2.png");
 	}
 	
 	public synchronized void start(){
@@ -55,8 +58,8 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	}
 	
 	private void tick(){
-		player1.tick();
-		player2.tick();
+		player.tick();
+		level.tick();
 	}
 	
 	private void render(){
@@ -67,17 +70,17 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		}
 		Graphics g = bs.getDrawGraphics();
 		g.setColor(Color.darkGray);
-		g.fillRect(0, 0, Game.WIDTH, Game.HEIGTH);
-		player1.render(g);
-		player2.render(g);
+		g.fillRect(0, 0, Game2.WIDTH, Game2.HEIGTH);
+		player.render(g);
+		level.render(g);
 		g.dispose();
 		bs.show();
 	}
 	
 	public static void main(String[]args) {
-		Game game = new Game();
+		Game2 game = new Game2();
 		JFrame frame = new JFrame();
-		frame.setTitle(Game.TITLE);
+		frame.setTitle(Game2.TITLE);
 		frame.add(game);
 		frame.pack();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -89,37 +92,28 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	
 	@Override
 	public void keyTyped(KeyEvent e) {
-		// TODO Auto-generated method stub
 		
 	}
+	
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if(e.getKeyCode() == KeyEvent.VK_RIGHT)player1.rigth = true;
-		if(e.getKeyCode() == KeyEvent.VK_LEFT)player1.left = true;
-		if(e.getKeyCode() == KeyEvent.VK_UP)player1.up = true;
-		if(e.getKeyCode() == KeyEvent.VK_DOWN)player1.down = true;
-		
-		if(e.getKeyCode() == KeyEvent.VK_D)player2.rigth = true;
-		if(e.getKeyCode() == KeyEvent.VK_A)player2.left = true;
-		if(e.getKeyCode() == KeyEvent.VK_W)player2.up = true;
-		if(e.getKeyCode() == KeyEvent.VK_S)player2.down = true;
+		if(e.getKeyCode() == KeyEvent.VK_RIGHT)player.rigth = true;
+		if(e.getKeyCode() == KeyEvent.VK_LEFT)player.left = true;
+		if(e.getKeyCode() == KeyEvent.VK_UP)player.up = true;
+		if(e.getKeyCode() == KeyEvent.VK_DOWN)player.down = true;
 		
 		if(e.getKeyCode() == KeyEvent.VK_ESCAPE) System.exit(1);
-		
 	}
+	
 	@Override
 	public void keyReleased(KeyEvent e) {
-		if(e.getKeyCode() == KeyEvent.VK_RIGHT)player1.rigth = false;
-		if(e.getKeyCode() == KeyEvent.VK_LEFT)player1.left = false;
-		if(e.getKeyCode() == KeyEvent.VK_UP)player1.up = false;
-		if(e.getKeyCode() == KeyEvent.VK_DOWN)player1.down = false;
-		
-		if(e.getKeyCode() == KeyEvent.VK_D)player2.rigth = false;
-		if(e.getKeyCode() == KeyEvent.VK_A)player2.left = false;
-		if(e.getKeyCode() == KeyEvent.VK_W)player2.up = false;
-		if(e.getKeyCode() == KeyEvent.VK_S)player2.down = false;
+		if(e.getKeyCode() == KeyEvent.VK_RIGHT)player.rigth = false;
+		if(e.getKeyCode() == KeyEvent.VK_LEFT)player.left = false;
+		if(e.getKeyCode() == KeyEvent.VK_UP)player.up = false;
+		if(e.getKeyCode() == KeyEvent.VK_DOWN)player.down = false;
 		
 	}
+	
 	@Override
 	public void run() {
 		requestFocus();
