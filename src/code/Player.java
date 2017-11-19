@@ -4,7 +4,6 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 
 public class Player extends Rectangle {
-	private String data;
 
 	private static final long serialVersionUID = 1L;
 

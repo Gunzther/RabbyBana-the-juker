@@ -22,6 +22,7 @@ public class Game2 extends Canvas implements Runnable,KeyListener {
 	
 	public static Player player;
 	public static Bot enemy;
+	public static SmallItems small;
 	public static Level2 level;
 	public static BotSheet enemySheet;
 	public static BotSheet playerSheet;
@@ -43,6 +44,7 @@ public class Game2 extends Canvas implements Runnable,KeyListener {
 	public synchronized void start(){
 		if(isRunning) return;
 		isRunning = true;
+		
 		thread = new Thread(this);
 		thread.start();
 	}

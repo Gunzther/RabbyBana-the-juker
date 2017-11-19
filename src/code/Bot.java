@@ -19,7 +19,7 @@ public class Bot extends Rectangle{
 	private int time = 0;
 	private int targetTime = 60*1;
 	
-	private int speedE = 4;
+	private int speedE = 2;
 
 	public Bot(int x ,int y){
 		randomGen = new Random();
@@ -206,8 +206,6 @@ public class Bot extends Rectangle{
 	}
 
 	public void render(Graphics g){
-//		g.setColor(Color.pink);
-//		g.fillRect(x	, y, width, height);
 		g.drawImage(Game2.enemySheet.getBot(0,0),x,y,32,32,null);
 	}
 	
