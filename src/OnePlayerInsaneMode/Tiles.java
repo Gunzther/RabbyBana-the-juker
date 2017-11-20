@@ -1,4 +1,4 @@
-package code;
+package OnePlayerInsaneMode;
 
 import java.awt.Color;
 import java.awt.Graphics;

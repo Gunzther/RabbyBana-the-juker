@@ -1,4 +1,4 @@
-package code;
+package OnePlayerNewbieMode;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;

@@ -1,7 +1,7 @@
 package GUI;
 
 
-import code.Game2;
+
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -132,7 +132,7 @@ public class Difficultyselected extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       Game2.main();
+      
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
