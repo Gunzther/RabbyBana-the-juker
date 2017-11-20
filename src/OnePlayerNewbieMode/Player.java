@@ -67,9 +67,7 @@ public class Player extends Rectangle {
 		
 			Bot enemy = Game.enemy;
 			if(enemy.intersects(this)) {
-//				JOptionPane.showMessageDialog(null,"You Lose!!!",null,JOptionPane.PLAIN_MESSAGE);
-				//messageLose();
-				//playOrQuit();
+				System.exit(1);
 			}
 			if(timePlayer == 60*2) {
 				timePlayer = 0;
