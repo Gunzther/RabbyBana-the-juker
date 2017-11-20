@@ -46,10 +46,10 @@ public class Player extends Rectangle {
 						speed = 2;
 				}
 				else if(level.rand == 2) {
-						en.speedE = 8;
+						en.speedE = 4;
 				}
 				else if(level.rand == 3) {
-						en.speedE = 8;
+						en.speedE = 1;
 				}
 				level.item.remove(i);
 				break;

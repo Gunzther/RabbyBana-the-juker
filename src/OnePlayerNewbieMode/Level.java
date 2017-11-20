@@ -80,9 +80,9 @@ public class Level {
 			Game.enemy.render(g);
 			if(timeItem == 1) {
 				randomItem = new Random();
-				randNum = randomItem.nextInt(11)+0;
+				randNum = randomItem.nextInt(12);
 				randomItem = new Random();
-				rand = randomItem.nextInt(3)+0;
+				rand = randomItem.nextInt(4);
 			}
 			
 			if(timeItem == 60*2) {
