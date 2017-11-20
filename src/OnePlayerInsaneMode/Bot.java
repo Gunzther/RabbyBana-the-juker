@@ -19,12 +19,12 @@ public class Bot extends Rectangle{
 	
 	public Random randomGen;
 	public int speedE = 6;
-	public int enemySize = 32;
+	public int enemySize = 30;
 	public int timeSizeEn = 0;
 
 	public Bot(int x ,int y){
 		randomGen = new Random();
-		setBounds(x,y,32,32);
+		setBounds(x,y,30,30);
 		dir = randomGen.nextInt(4);
 	}
 	

@@ -122,7 +122,7 @@ public class ModeSelected extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void twoplayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoplayerActionPerformed
-        // TODO add your handling code here:
+        TwoPlayerMode.Game.main();
     }//GEN-LAST:event_twoplayerActionPerformed
 
     private void singleplayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_singleplayerActionPerformed

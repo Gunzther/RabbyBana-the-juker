@@ -14,13 +14,22 @@ package GUI;
  * @author Smarty
  */
 public class Difficultyselected extends javax.swing.JFrame {
-
+    private int result;
     /**
      * Creates new form Difficultyselected
      */
     public Difficultyselected() {
         initComponents();
          this.setLocationRelativeTo(null);
+         this.result = 0;
+    }
+    
+    public void setResult(int result){
+        this.result = result;
+    }
+    
+    public int getResult(){
+        return this.result;
     }
 
     /**
@@ -67,6 +76,11 @@ public class Difficultyselected extends javax.swing.JFrame {
         jButton3.setFont(new java.awt.Font("Marker Felt", 0, 36)); // NOI18N
         jButton3.setText("Insane");
         jButton3.setPreferredSize(new java.awt.Dimension(142, 48));
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jButton4.setFont(new java.awt.Font("Marker Felt", 0, 36)); // NOI18N
         jButton4.setText("Back");
@@ -132,17 +146,26 @@ public class Difficultyselected extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-      
+      OnePlayerNewbieMode.Game.main();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-       
+       OnePlayerCasualMode.Game.main();
+       this.dispose();
+//       if(this.result == 1){
+//         new Difficultyselected().setVisible(true);  
+//       }  
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         new ModeSelected().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_jButton4ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        OnePlayerInsaneMode.Game.main();
+   
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments

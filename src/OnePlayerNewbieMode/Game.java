@@ -80,7 +80,7 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	}
 	
 
-	public static void main(String[]args) {
+	public static void main() {
 		Game game = new Game();
 		JFrame frame = new JFrame();
 		frame.setTitle(Game.TITLE);
