@@ -19,7 +19,7 @@ public class Game2 extends Canvas implements Runnable,KeyListener {
 	public static final String TITLE = "Chasing-Game-SKE";
 	
 	private Thread thread;
-	
+ 
 	public static Player player;
 	public static Bot enemy;
 	public static Level2 level;
@@ -77,7 +77,7 @@ public class Game2 extends Canvas implements Runnable,KeyListener {
 		bs.show();
 	}
 	
-	public static void main(String[]args) {
+	public static void main() {
 		Game2 game = new Game2();
 		JFrame frame = new JFrame();
 		frame.setTitle(Game2.TITLE);
