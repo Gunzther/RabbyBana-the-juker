@@ -14,12 +14,13 @@ public class Bot extends Rectangle{
 	private int dir = -1;
 	private String lastDir = "";
 	
-	public Random randomGen;
-	
 	private int time = 0;
 	private int targetTime = 60*1;
 	
-	private int speedE = 2;
+	public Random randomGen;
+	public int speedE = 2;
+	public int enemySize = 32;
+	public int timeSizeEn = 0;
 
 	public Bot(int x ,int y){
 		randomGen = new Random();
@@ -80,6 +81,22 @@ public class Bot extends Rectangle{
 		else if(state == find_path) {
 			findPath();
 		}
+		
+		Level2 level = Game2.level;
+		
+		for(int i = 0;i < level.smallItem.size();i++){
+			if(this.intersects(level.smallItem.get(i))){
+				timeSizeEn = 0;
+				enemySize = 16;
+				level.smallItem.remove(i);
+				break;
+			}
+		}
+		if(timeSizeEn == 60*4) {
+			enemySize = 32;
+			timeSizeEn = 0;
+		}
+		timeSizeEn++;
 	}
 	
 	public void findPath() {
@@ -206,7 +223,7 @@ public class Bot extends Rectangle{
 	}
 
 	public void render(Graphics g){
-		g.drawImage(Game2.enemySheet.getBot(0,0),x,y,32,32,null);
+		g.drawImage(Game2.enemySheet.getBot(0,0),x,y,enemySize,enemySize,null);
 	}
 	
 }

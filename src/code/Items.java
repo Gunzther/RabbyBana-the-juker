@@ -15,19 +15,19 @@ public class Items extends Rectangle{
 	
 	public void render(Graphics g,int rand){
 		if(rand == 0) {
-			itemSheet = new BotSheet("/bot/toffy1.png");
+			itemSheet = new BotSheet("/items/toffy1.png");
 			g.drawImage(itemSheet.getBot(0,0),x,y,24,24,null);
 		}
 		else if(rand == 1) {
-			itemSheet = new BotSheet("/bot/toffy2.png");
+			itemSheet = new BotSheet("/items/toffy2.png");
 			g.drawImage(itemSheet.getBot(0,0),x,y,24,24,null);
 		}
 		else if(rand == 2) {
-			itemSheet = new BotSheet("/bot/toffy3.png");
+			itemSheet = new BotSheet("/items/toffy3.png");
 			g.drawImage(itemSheet.getBot(0,0),x,y,24,24,null);
 		}
 		else if(rand == 3) {
-			itemSheet = new BotSheet("/bot/toffy4.png");
+			itemSheet = new BotSheet("/items/toffy4.png");
 			g.drawImage(itemSheet.getBot(0,0),x,y,24,24,null);
 		}
 	}

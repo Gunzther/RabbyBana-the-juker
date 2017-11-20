@@ -36,7 +36,7 @@ public class Game2 extends Canvas implements Runnable,KeyListener {
 		addKeyListener(this);
 		player = new Player(Game2.WIDTH/2,Game2.HEIGTH/2);
 		enemy = new Bot(Game2.WIDTH/2,Game2.HEIGTH/2);
-		level = new Level2("/bot/map_chasing2.png");
+		level = new Level2("/map/map_chasing2.png");
 		enemySheet = new BotSheet("/bot/tui.png");
 		playerSheet = new BotSheet("/bot/banana2.png");
 	}

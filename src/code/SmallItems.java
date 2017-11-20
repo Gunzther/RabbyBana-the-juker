@@ -14,7 +14,7 @@ public class SmallItems extends Rectangle{
 	}
 	
 	public void render(Graphics g){
-			smallItemSheet = new BotSheet("/bot/toffy5.png");
+			smallItemSheet = new BotSheet("/items/toffy5.png");
 			g.drawImage(smallItemSheet.getBot(0,0),x,y,24,24,null);
 	}
 }
