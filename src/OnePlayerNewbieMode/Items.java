@@ -1,4 +1,4 @@
-package code;
+package OnePlayerNewbieMode;
 
 import java.awt.Graphics;
 import java.awt.Rectangle;

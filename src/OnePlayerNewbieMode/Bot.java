@@ -1,4 +1,4 @@
-package code;
+package OnePlayerNewbieMode;
 
 import java.awt.Graphics;
 import java.awt.Rectangle;
@@ -40,35 +40,35 @@ public class Bot extends Rectangle{
 		
 		else if(state == smart){ //follow the player
 			boolean move = false;
-			 if(x < Game2.player.x) { 
+			 if(x < Game.player.x) { 
 				 if(canMove(x+speedE, y)) {
 					 x+=speedE;
 					 move = true;
 					 lastDir = "right";
 				 }
 			 }
-			 if(x > Game2.player.x) { 
+			 if(x > Game.player.x) { 
 				 if(canMove(x-speedE, y)) { 
 					 x-=speedE;
 					 move = true;
 					 lastDir = "left";
 				 }
 			 }
-			 if(y < Game2.player.y) {
+			 if(y < Game.player.y) {
 				 if(canMove(x, y+speedE)) { 
 					 y+=speedE;
 					 move = true;
 					 lastDir = "down";
 				 }
 			 }
-			 if(y > Game2.player.y) { 
+			 if(y > Game.player.y) { 
 				 if(canMove(x, y-speedE)) { 
 					 y-=speedE;
 					 move = true;
 					 lastDir = "up";
 				 }
 			 }
-			if(x == Game2.player.x && y == Game2.player.y) move = true;
+			if(x == Game.player.x && y == Game.player.y) move = true;
 			if(!move) {
 				state = find_path;
 			}
@@ -82,7 +82,7 @@ public class Bot extends Rectangle{
 			findPath();
 		}
 		
-		Level2 level = Game2.level;
+		Level level = Game.level;
 		
 		for(int i = 0;i < level.smallItem.size();i++){
 			if(this.intersects(level.smallItem.get(i))){
@@ -101,7 +101,7 @@ public class Bot extends Rectangle{
 	
 	public void findPath() {
 		if(lastDir.equals("right")) {
-			if(y < Game2.player.y) {
+			if(y < Game.player.y) {
 				if(canMove(x, y+speedE)) {
 					y+=speedE;
 					state = smart;
@@ -116,7 +116,7 @@ public class Bot extends Rectangle{
 		}
 		
 		else if(lastDir.equals("left")) {
-			if(y < Game2.player.y) {
+			if(y < Game.player.y) {
 				if(canMove(x, y+speedE)) {
 					y+=speedE;
 					state = smart;
@@ -131,7 +131,7 @@ public class Bot extends Rectangle{
 		}
 		
 		else if(lastDir.equals("up")) {
-			if(x < Game2.player.x) {
+			if(x < Game.player.x) {
 				if(canMove(x+speedE, y)) {
 					x+=speedE;
 					state = smart;
@@ -146,7 +146,7 @@ public class Bot extends Rectangle{
 		}
 		
 		else if(lastDir.equals("down")) {
-			if(x < Game2.player.x) {
+			if(x < Game.player.x) {
 				if(canMove(x+speedE, y)) {
 					x+=speedE;
 					state = smart;
@@ -208,7 +208,7 @@ public class Bot extends Rectangle{
 	
 	private boolean canMove(int nextX,int nextY){
 		Rectangle bounds = new Rectangle(nextX,nextY,width,height);
-		Level2 level = Game2.level;
+		Level level = Game.level;
 		
 		for(int xx = 0;xx < level.tiles.length;xx++){
 			for(int yy = 0;yy < level.tiles[0].length;yy++){
@@ -223,7 +223,7 @@ public class Bot extends Rectangle{
 	}
 
 	public void render(Graphics g){
-		g.drawImage(Game2.enemySheet.getBot(0,0),x,y,enemySize,enemySize,null);
+		g.drawImage(Game.enemySheet.getBot(0,0),x,y,enemySize,enemySize,null);
 	}
 	
 }

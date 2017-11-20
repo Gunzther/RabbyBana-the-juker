@@ -1,6 +1,5 @@
-package code;
+package OnePlayerNewbieMode;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
@@ -10,7 +9,7 @@ import java.util.Random;
 
 import javax.imageio.ImageIO;
 
-public class Level2 {
+public class Level {
 	
 	public Random randomItem;
 	public int randNum;
@@ -23,13 +22,13 @@ public class Level2 {
 	public Tiles[][] tiles;
 
 	public List<Items> item;
-	public List<SmallItems> smallItem;
+	public List<SmallItem> smallItem;
 	public int[] tileColor = {0xFF00FF00,0xFF00FF01,0xFF00FF02,0xFF00FF03,0xFF00FF04,0xFF00FF05,0xFF00FF06,0xFF00FF07,0xFF00FF08,0xFF00FF09,0xFF00FF10,0xFF00FF11};
 	
 	public int[] pixels;
 	public int val;
 	
-	public Level2(String path){
+	public Level(String path){
 		item = new ArrayList<>();
 		smallItem = new ArrayList<>();
 		
@@ -50,13 +49,13 @@ public class Level2 {
 					}
 					
 					else if(val == 0xFFFF00FF){ //Player
-						Game2.player.x = xx*32;
-						Game2.player.y = yy*32;
+						Game.player.x = xx*32;
+						Game.player.y = yy*32;
 					}
 					
 					else if(val == 0xFFFF0000){ //Enemies
-						Game2.enemy.x = xx*32;
-						Game2.enemy.y = yy*32;
+						Game.enemy.x = xx*32;
+						Game.enemy.y = yy*32;
 					}
 				}
 			}
@@ -67,7 +66,7 @@ public class Level2 {
 	}
 	
 	public void tick(){
-		Game2.enemy.tick();
+		Game.enemy.tick();
 		time++;
 		timeItem++;
 	}
@@ -78,7 +77,7 @@ public class Level2 {
 				if(tiles[x][y] != null) tiles[x][y].render(g);
 			}
 		}
-			Game2.enemy.render(g);
+			Game.enemy.render(g);
 			if(timeItem == 1) {
 				randomItem = new Random();
 				randNum = randomItem.nextInt(11)+0;
@@ -115,7 +114,7 @@ public class Level2 {
 					for(int yy = 0;yy < heigth;yy++){
 						val = pixels[xx + (yy*width)];
 						if(val == 0xFFFFFF00){ //toSmall Items
-							smallItem.add(new SmallItems(xx*32,yy*32));
+							smallItem.add(new SmallItem(xx*32,yy*32));
 						}
 					}
 				}

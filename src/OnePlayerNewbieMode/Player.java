@@ -1,4 +1,4 @@
-package code;
+package OnePlayerNewbieMode;
 
 import java.awt.Graphics;
 import java.awt.Rectangle;
@@ -12,10 +12,10 @@ public class Player extends Rectangle {
 	public int speed = 4;
 	private int timePlayer;
 	private int timeSize;
-	public int playerSize = 32;
+	public int playerSize = 30;
 
 	public Player(int x, int y) {
-		setBounds(x, y, 32, 32);
+		setBounds(x, y, 30, 30);
 	}
 
 	public void tick() {
@@ -33,8 +33,8 @@ public class Player extends Rectangle {
 			y += speed;
 		}
 		
-		Level2 level = Game2.level;
-		Bot en = Game2.enemy;
+		Level level = Game.level;
+		Bot en = Game.enemy;
 		
 		for(int i = 0;i < level.item.size();i++){
 			if(this.intersects(level.item.get(i))){
@@ -65,7 +65,7 @@ public class Player extends Rectangle {
 			}
 		}
 		
-			Bot enemy = Game2.enemy;
+			Bot enemy = Game.enemy;
 			if(enemy.intersects(this)) {
 //				JOptionPane.showMessageDialog(null,"You Lose!!!",null,JOptionPane.PLAIN_MESSAGE);
 				//messageLose();
@@ -77,7 +77,7 @@ public class Player extends Rectangle {
 				en.speedE = 2;
 			}
 			if(timeSize == 60*4) {
-				playerSize = 32;
+				playerSize = 30;
 				timeSize = 0;
 			}
 			timeSize++;
@@ -86,7 +86,7 @@ public class Player extends Rectangle {
 	
 	private boolean canMove(int nextX,int nextY){
 		Rectangle bounds = new Rectangle(nextX,nextY,width,height);
-		Level2 level = Game2.level;
+		Level level = Game.level;
 		
 		for(int xx = 0;xx < level.tiles.length;xx++){
 			for(int yy = 0;yy < level.tiles[0].length;yy++){
@@ -101,7 +101,7 @@ public class Player extends Rectangle {
 	}
 
 	public void render(Graphics g) {
-		BotSheet sheet = Game2.playerSheet;
+		BotSheet sheet = Game.playerSheet;
 		g.drawImage(sheet.getBot(0, 0), x, y, playerSize, playerSize, null);
 	}
 }

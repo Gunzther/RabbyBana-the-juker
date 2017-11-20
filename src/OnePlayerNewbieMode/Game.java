@@ -1,4 +1,4 @@
-package code;
+package OnePlayerNewbieMode;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -10,7 +10,7 @@ import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
 
-public class Game2 extends Canvas implements Runnable,KeyListener {
+public class Game extends Canvas implements Runnable,KeyListener {
 	
 	private static final long serialVersionUID = 1L; 
 	private boolean isRunning = false;
@@ -22,21 +22,21 @@ public class Game2 extends Canvas implements Runnable,KeyListener {
 	
 	public static Player player;
 	public static Bot enemy;
-	public static SmallItems small;
-	public static Level2 level;
+	public static SmallItem small;
+	public static Level level;
 	public static BotSheet enemySheet;
 	public static BotSheet playerSheet;
 	
-	public Game2() {
+	public Game() {
 		Dimension dimension = new Dimension(WIDTH, HEIGTH);
 		setPreferredSize(dimension);
 		setMinimumSize(dimension);
 		setMaximumSize(dimension);
 		
 		addKeyListener(this);
-		player = new Player(Game2.WIDTH/2,Game2.HEIGTH/2);
-		enemy = new Bot(Game2.WIDTH/2,Game2.HEIGTH/2);
-		level = new Level2("/map/map_chasing2.png");
+		player = new Player(Game.WIDTH/2,Game.HEIGTH/2);
+		enemy = new Bot(Game.WIDTH/2,Game.HEIGTH/2);
+		level = new Level("/map/map_chasing2.png");
 		enemySheet = new BotSheet("/bot/tui.png");
 		playerSheet = new BotSheet("/bot/banana2.png");
 	}
@@ -72,7 +72,7 @@ public class Game2 extends Canvas implements Runnable,KeyListener {
 		}
 		Graphics g = bs.getDrawGraphics();
 		g.setColor(Color.darkGray);
-		g.fillRect(0, 0, Game2.WIDTH, Game2.HEIGTH);
+		g.fillRect(0, 0, Game.WIDTH, Game.HEIGTH);
 		player.render(g);
 		level.render(g);
 		g.dispose();
@@ -80,9 +80,9 @@ public class Game2 extends Canvas implements Runnable,KeyListener {
 	}
 	
 	public static void main(String[]args) {
-		Game2 game = new Game2();
+		Game game = new Game();
 		JFrame frame = new JFrame();
-		frame.setTitle(Game2.TITLE);
+		frame.setTitle(Game.TITLE);
 		frame.add(game);
 		frame.pack();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
