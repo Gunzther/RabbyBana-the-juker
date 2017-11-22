@@ -1,6 +1,6 @@
 package GUI;
 
-
+import kuusisto.tinysound.TinySound;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

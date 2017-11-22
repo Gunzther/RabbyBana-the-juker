@@ -1,5 +1,8 @@
 package GUI;
 
+import kuusisto.tinysound.Music;
+import kuusisto.tinysound.TinySound;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -11,13 +14,16 @@ package GUI;
  * @author Smarty
  */
 public class StartUpMenu extends javax.swing.JFrame {
-
+	
+    
+        
     /**
      * Creates new form StartUpMenu
      */
     public StartUpMenu() {
         initComponents();
         this.setLocationRelativeTo(null);
+        
     }
 
     /**
@@ -37,25 +43,36 @@ public class StartUpMenu extends javax.swing.JFrame {
         StartButton = new javax.swing.JButton();
         SettingButton = new javax.swing.JButton();
         CreditButton = new javax.swing.JButton();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setSize(new java.awt.Dimension(800, 640));
 
+        menuPanel.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         menuPanel.setMinimumSize(new java.awt.Dimension(800, 640));
         menuPanel.setPreferredSize(new java.awt.Dimension(800, 640));
         menuPanel.setSize(new java.awt.Dimension(800, 640));
+        menuPanel.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("VitaminTabletE", 0, 100)); // NOI18N
         jLabel1.setText("RabbyBana");
+        menuPanel.add(jLabel1);
+        jLabel1.setBounds(6, 6, 744, 100);
 
         jLabel4.setFont(new java.awt.Font("Marker Felt", 0, 24)); // NOI18N
         jLabel4.setText("The juker");
+        menuPanel.add(jLabel4);
+        jLabel4.setBounds(696, 118, 104, 27);
 
         jLabel3.setFont(new java.awt.Font("Wingdings 3", 3, 120)); // NOI18N
         jLabel3.setText("C");
+        menuPanel.add(jLabel3);
+        jLabel3.setBounds(322, 151, 107, 109);
 
         jLabel2.setFont(new java.awt.Font("Silom", 0, 48)); // NOI18N
         jLabel2.setText("hasing-game");
+        menuPanel.add(jLabel2);
+        jLabel2.setBounds(435, 202, 344, 62);
 
         StartButton.setFont(new java.awt.Font("Marker Felt", 0, 48)); // NOI18N
         StartButton.setText("Play");
@@ -64,6 +81,8 @@ public class StartUpMenu extends javax.swing.JFrame {
                 StartButtonActionPerformed(evt);
             }
         });
+        menuPanel.add(StartButton);
+        StartButton.setBounds(77, 312, 213, 64);
 
         SettingButton.setFont(new java.awt.Font("Marker Felt", 0, 48)); // NOI18N
         SettingButton.setText("Settings");
@@ -72,6 +91,8 @@ public class StartUpMenu extends javax.swing.JFrame {
                 SettingButtonActionPerformed(evt);
             }
         });
+        menuPanel.add(SettingButton);
+        SettingButton.setBounds(293, 382, 213, 64);
 
         CreditButton.setFont(new java.awt.Font("Marker Felt", 0, 48)); // NOI18N
         CreditButton.setText("Credit");
@@ -80,55 +101,17 @@ public class StartUpMenu extends javax.swing.JFrame {
                 CreditButtonActionPerformed(evt);
             }
         });
+        menuPanel.add(CreditButton);
+        CreditButton.setBounds(508, 452, 213, 64);
 
-        javax.swing.GroupLayout menuPanelLayout = new javax.swing.GroupLayout(menuPanel);
-        menuPanel.setLayout(menuPanelLayout);
-        menuPanelLayout.setHorizontalGroup(
-            menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menuPanelLayout.createSequentialGroup()
-                .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(menuPanelLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel1))
-                    .addGroup(menuPanelLayout.createSequentialGroup()
-                        .addGap(77, 77, 77)
-                        .addComponent(StartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(menuPanelLayout.createSequentialGroup()
-                        .addGap(322, 322, 322)
-                        .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(SettingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(menuPanelLayout.createSequentialGroup()
-                                .addComponent(jLabel3)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jLabel2)))))
-                .addContainerGap(21, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuPanelLayout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuPanelLayout.createSequentialGroup()
-                        .addComponent(CreditButton, javax.swing.GroupLayout.PREFERRED_SIZE, 213, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(22, 22, 22))
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)))
-        );
-        menuPanelLayout.setVerticalGroup(
-            menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menuPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(menuPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addGap(48, 48, 48)
-                .addComponent(StartButton, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                .addComponent(SettingButton, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(43, 43, 43)
-                .addComponent(CreditButton, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(84, 84, 84))
-        );
+        jLabel5.setIcon(new javax.swing.ImageIcon("/Users/Smarty/Desktop/startupmenu.gif")); // NOI18N
+        jLabel5.setText("jLabel5");
+        jLabel5.setBounds(new java.awt.Rectangle(0, 0, 800, 640));
+        jLabel5.setMaximumSize(new java.awt.Dimension(800, 640));
+        jLabel5.setMinimumSize(new java.awt.Dimension(800, 640));
+        jLabel5.setPreferredSize(new java.awt.Dimension(800, 640));
+        menuPanel.add(jLabel5);
+        jLabel5.setBounds(0, 0, 800, 640);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -153,10 +136,12 @@ public class StartUpMenu extends javax.swing.JFrame {
 
     private void CreditButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreditButtonActionPerformed
         new Credit().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_CreditButtonActionPerformed
 
     private void SettingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SettingButtonActionPerformed
-        // TODO add your handling code here:
+        new Settings().setVisible(true);
+        this.dispose();
     }//GEN-LAST:event_SettingButtonActionPerformed
 
     /**
@@ -189,6 +174,7 @@ public class StartUpMenu extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
+                TinySound.init();
                 new StartUpMenu().setVisible(true);
             }
         });
@@ -202,6 +188,7 @@ public class StartUpMenu extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel menuPanel;
     // End of variables declaration//GEN-END:variables
 }

@@ -2,7 +2,7 @@ package OnePlayerCasualMode;
 
 import GUI.Difficultyselected;
 import GUI.Endinglosscasualmode;
-import GUI.ModeSelected;
+
 import java.awt.Canvas;
 import java.awt.Color;
 import java.awt.Dimension;
@@ -12,6 +12,10 @@ import java.awt.event.KeyListener;
 import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
+import kuusisto.tinysound.Music;
+import kuusisto.tinysound.Sound;
+import kuusisto.tinysound.TinySound;
+
 
 public class Game extends Canvas implements Runnable,KeyListener {
 	
@@ -32,6 +36,8 @@ public class Game extends Canvas implements Runnable,KeyListener {
         public static GUI.Difficultyselected resultCS;
         public static JFrame frame;
 	
+        Music song = TinySound.loadMusic("chasing-game.wav");
+        
 	public Game() {
 		Dimension dimension = new Dimension(WIDTH, HEIGTH);
 		setPreferredSize(dimension);
@@ -54,18 +60,22 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		
 		thread = new Thread(this);
 		thread.start();
+                song.play(true); 
 	}
 	
 	public synchronized void stop(){
                 frame.dispose();
-                
-		if(!isRunning) return;
+		if(!isRunning){
+                    return;
+                }
 		isRunning = false;
 		try {
 			thread.join();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+                
+                
 	}
 	
 	private void tick(){
@@ -154,8 +164,18 @@ public class Game extends Canvas implements Runnable,KeyListener {
 				timer += 1000;
 			}
 		}
+                song.stop();
                 new Endinglosscasualmode().setVisible(true);
-                
+              
+                Sound coin = TinySound.loadSound("win.wav");
+                for (int i = 0; i < 2; i++) {
+			coin.play();
+			try {
+				Thread.sleep(1500);
+			} catch (InterruptedException e) {}
+		}
+		//be sure to shutdown TinySound when done
+		
 		stop();
                 
 	}
