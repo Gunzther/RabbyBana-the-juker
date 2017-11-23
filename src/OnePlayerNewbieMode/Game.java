@@ -1,7 +1,6 @@
 package OnePlayerNewbieMode;
 
 import java.awt.Canvas;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
@@ -9,6 +8,13 @@ import java.awt.event.KeyListener;
 import java.awt.image.BufferStrategy;
 
 import javax.swing.JFrame;
+
+import GUI.Difficultyselected1;
+import GUI.EndingWinFrame;
+import GUI.EndingLoseFrame;
+import kuusisto.tinysound.Music;
+import kuusisto.tinysound.Sound;
+import kuusisto.tinysound.TinySound;
 
 public class Game extends Canvas implements Runnable,KeyListener {
 	
@@ -19,13 +25,19 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	public static final String TITLE = "Chasing-Game-SKE";
 	
 	private Thread thread;
- 
+	
 	public static Player player;
 	public static Bot enemy;
+	public static Map map;
 	public static SmallItem small;
 	public static Level level;
 	public static BotSheet enemySheet;
 	public static BotSheet playerSheet;
+	public static MapSheet mapSheet;
+	public static GUI.Difficultyselected1 resultCS;
+	public static JFrame frame;
+	
+	 Music song = TinySound.loadMusic("/sound/chasing-game.wav");
 	
 	public Game() {
 		Dimension dimension = new Dimension(WIDTH, HEIGTH);
@@ -36,9 +48,13 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		addKeyListener(this);
 		player = new Player(Game.WIDTH/2,Game.HEIGTH/2);
 		enemy = new Bot(Game.WIDTH/2,Game.HEIGTH/2);
+		map = new Map(0,0);
 		level = new Level("/map/map_chasing2.png");
 		enemySheet = new BotSheet("/bot/tui.png");
 		playerSheet = new BotSheet("/bot/banana2.png");
+		mapSheet = new MapSheet("/map/newMap.png");
+		resultCS = new Difficultyselected1();
+        frame = new JFrame();
 	}
 	
 	public synchronized void start(){
@@ -47,9 +63,11 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		
 		thread = new Thread(this);
 		thread.start();
+		song.play(true); 
 	}
 	
 	public synchronized void stop(){
+		frame.dispose();
 		if(!isRunning) return;
 		isRunning = false;
 		try {
@@ -71,18 +89,16 @@ public class Game extends Canvas implements Runnable,KeyListener {
 			return;
 		}
 		Graphics g = bs.getDrawGraphics();
-		g.setColor(Color.darkGray);
-		g.fillRect(0, 0, Game.WIDTH, Game.HEIGTH);
+		map.render(g);
 		player.render(g);
 		level.render(g);
 		g.dispose();
 		bs.show();
 	}
 	
-
 	public static void main() {
 		Game game = new Game();
-		JFrame frame = new JFrame();
+		frame = new JFrame();
 		frame.setTitle(Game.TITLE);
 		frame.add(game);
 		frame.pack();
@@ -135,17 +151,47 @@ public class Game extends Canvas implements Runnable,KeyListener {
 			while(delta >= 1){
 				tick();
 				render();
+				if(resultCS.getResult() == 1) break;
+				else if(resultCS.getResult() == 2)break;
 				fps++;
 				delta--;
 			}
-			
+			if(resultCS.getResult() == 1) break;
+			else if(resultCS.getResult() == 2)break;
 			if(System.currentTimeMillis() - timer >= 1000){
 				System.out.println(fps);
 				fps = 0;
 				timer += 1000;
 			}
 		}
+		 song.stop();
+		 
+		 if(resultCS.getResult() == 1) {
+			 new EndingLoseFrame().setVisible(true);
+			 Sound coin = TinySound.loadSound("/sound/lose.wav");
+	         for (int i = 0; i < 1; i++) {
+	        	 	coin.play();
+	        	 	try {
+	        	 		Thread.sleep(2000);
+	        	 	} catch (InterruptedException e) {}
+	         }
+		 }
+		 
+		 else if(resultCS.getResult() == 2) {
+			 new EndingWinFrame().setVisible(true);
+			 Sound coin = TinySound.loadSound("/sound/win.wav");
+	         for (int i = 0; i < 2; i++) {
+	        	 	coin.play();
+	        	 	try {
+	        	 		Thread.sleep(1500);
+	        	 	} catch (InterruptedException e) {}
+	         }
+		 }
+
+         
+         
 		stop();
 		
 	}
 }
+

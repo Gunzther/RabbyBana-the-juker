@@ -18,3 +18,4 @@ public class SmallItem extends Rectangle{
 			g.drawImage(smallItemSheet.getBot(0,0),x,y,24,24,null);
 	}
 }
+

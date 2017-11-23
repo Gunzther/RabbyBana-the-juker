@@ -3,6 +3,8 @@ package OnePlayerNewbieMode;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
+import OnePlayerCasualMode.Game;
+
 
 public class Player extends Rectangle {
 
@@ -33,8 +35,8 @@ public class Player extends Rectangle {
 			y += speed;
 		}
 		
-		Level level = Game.level;
-		Bot en = Game.enemy;
+		Level level = OnePlayerNewbieMode.Game.level;
+		Bot en = OnePlayerNewbieMode.Game.enemy;
 		
 		for(int i = 0;i < level.item.size();i++){
 			if(this.intersects(level.item.get(i))){
@@ -65,9 +67,10 @@ public class Player extends Rectangle {
 			}
 		}
 		
-			Bot enemy = Game.enemy;
+			Bot enemy = OnePlayerNewbieMode.Game.enemy;
 			if(enemy.intersects(this)) {
-				System.exit(1);
+				OnePlayerNewbieMode.Game.resultCS.setResult(1);
+                return;
 			}
 			if(timePlayer == 60*2) {
 				timePlayer = 0;
@@ -84,7 +87,7 @@ public class Player extends Rectangle {
 	
 	private boolean canMove(int nextX,int nextY){
 		Rectangle bounds = new Rectangle(nextX,nextY,width,height);
-		Level level = Game.level;
+		Level level = OnePlayerNewbieMode.Game.level;
 		
 		for(int xx = 0;xx < level.tiles.length;xx++){
 			for(int yy = 0;yy < level.tiles[0].length;yy++){
@@ -99,7 +102,8 @@ public class Player extends Rectangle {
 	}
 
 	public void render(Graphics g) {
-		BotSheet sheet = Game.playerSheet;
+		BotSheet sheet = OnePlayerNewbieMode.Game.playerSheet;
 		g.drawImage(sheet.getBot(0, 0), x, y, playerSize, playerSize, null);
 	}
 }
+

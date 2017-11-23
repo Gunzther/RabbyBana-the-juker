@@ -1,7 +1,7 @@
 package OnePlayerCasualMode;
 
-import GUI.Difficultyselected;
-import GUI.Endinglosscasualmode;
+import GUI.Difficultyselected1;
+import GUI.EndingLoseFrame;
 
 import java.awt.Canvas;
 import java.awt.Color;
@@ -33,10 +33,10 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	public static Level level;
 	public static BotSheet enemySheet;
 	public static BotSheet playerSheet;
-        public static GUI.Difficultyselected resultCS;
-        public static JFrame frame;
+    public static GUI.Difficultyselected1 resultCS;
+    public static JFrame frame;
 	
-        Music song = TinySound.loadMusic("chasing-game.wav");
+    Music song = TinySound.loadMusic("chasing-game.wav");
         
 	public Game() {
 		Dimension dimension = new Dimension(WIDTH, HEIGTH);
@@ -50,8 +50,8 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		level = new Level("/map/map_chasing2.png");
 		enemySheet = new BotSheet("/bot/tui.png");
 		playerSheet = new BotSheet("/bot/banana2.png");
-                resultCS = new Difficultyselected();
-                frame = new JFrame();
+        resultCS = new Difficultyselected1();
+        frame = new JFrame();
 	}
 	
 	public synchronized void start(){
@@ -64,7 +64,7 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	}
 	
 	public synchronized void stop(){
-                frame.dispose();
+        frame.dispose();
 		if(!isRunning){
                     return;
                 }
@@ -153,7 +153,7 @@ public class Game extends Canvas implements Runnable,KeyListener {
 			while(delta >= 1){
 				tick();
 				render();
-                                if(resultCS.getResult() == 1) break;
+                if(resultCS.getResult() == 1) break;
 				fps++;
 				delta--;
 			}
@@ -165,7 +165,7 @@ public class Game extends Canvas implements Runnable,KeyListener {
 			}
 		}
                 song.stop();
-                new Endinglosscasualmode().setVisible(true);
+                new EndingLoseFrame().setVisible(true);
               
                 Sound coin = TinySound.loadSound("win.wav");
                 for (int i = 0; i < 2; i++) {

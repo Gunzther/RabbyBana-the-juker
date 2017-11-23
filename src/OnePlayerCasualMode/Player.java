@@ -1,6 +1,6 @@
 package OnePlayerCasualMode;
 
-import GUI.Difficultyselected;
+import GUI.Difficultyselected1;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
@@ -67,8 +67,8 @@ public class Player extends Rectangle {
 		
 			Bot enemy = Game.enemy;
 			if(enemy.intersects(this)) {
-                            Game.resultCS.setResult(1);
-                            return;
+				Game.resultCS.setResult(1);
+                return;
 			}
 			if(timePlayer == 60*2) {
 				timePlayer = 0;
