@@ -10,12 +10,12 @@ package GUI;
  *
  * @author Smarty
  */
-public class Endinglosscasualmode extends javax.swing.JFrame {
+public class EndingLoseFrame extends javax.swing.JFrame {
 
     /**
      * Creates new form Endinglosscasualmode
      */
-    public Endinglosscasualmode() {
+    public EndingLoseFrame() {
         initComponents();
          this.setLocationRelativeTo(null);
     }
@@ -151,20 +151,20 @@ public class Endinglosscasualmode extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Endinglosscasualmode.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EndingLoseFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Endinglosscasualmode.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EndingLoseFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Endinglosscasualmode.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EndingLoseFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Endinglosscasualmode.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(EndingLoseFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Endinglosscasualmode().setVisible(true);
+                new EndingLoseFrame().setVisible(true);
             }
         });
     }

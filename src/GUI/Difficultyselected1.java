@@ -10,6 +10,8 @@ package GUI;
  * @author Smarty
  */
 public class Difficultyselected1 extends javax.swing.JFrame {
+	
+	private int result;
 
     /**
      * Creates new form Difficultyselected1
@@ -17,6 +19,15 @@ public class Difficultyselected1 extends javax.swing.JFrame {
     public Difficultyselected1() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.result = 0;
+    }
+    
+    public void setResult(int result){
+        this.result = result;
+    }
+    
+    public int getResult(){
+        return this.result;
     }
 
     /**
