@@ -66,7 +66,8 @@ public class Player1 extends Rectangle {
 		}
 		
 			if(play2.intersects(this)) {
-				System.exit(1);
+				TwoPlayerMode.Game.resultCS.setResult(1);
+                return;
 			}
 			
 			if(timePlayer == 60*2) {

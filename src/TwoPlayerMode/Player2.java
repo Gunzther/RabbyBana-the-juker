@@ -66,10 +66,6 @@ public class Player2 extends Rectangle {
 			}
 		}
 		
-//			if(gametime = 1 min) {
-//				player2 win
-//			}
-		
 			if(timePlayer == 60*2) {
 				timePlayer = 0;
 				speed = 4;
