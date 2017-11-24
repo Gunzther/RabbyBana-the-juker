@@ -107,7 +107,6 @@ public class ModeSelected extends javax.swing.JFrame {
     }//GEN-LAST:event_singleplayerActionPerformed
 
     private void twoplayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoplayerActionPerformed
-    		Difficultyselected1.mode = new Mode("twoPlayer");
         TwoPlayerMode.Game.main();
     }//GEN-LAST:event_twoplayerActionPerformed
 

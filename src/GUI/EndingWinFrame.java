@@ -13,6 +13,8 @@ import kuusisto.tinysound.TinySound;
  * @author Smarty
  */
 public class EndingWinFrame extends javax.swing.JFrame {
+	
+	public Mode mode;
 
     /**
      * Creates new form Endingcasualmode
@@ -52,7 +54,11 @@ public class EndingWinFrame extends javax.swing.JFrame {
 
         jButton1.setFont(new java.awt.Font("Marker Felt", 0, 36)); // NOI18N
         jButton1.setText("Play Again");
-
+        jButton1.addActionListener(new java.awt.event.ActionListener() {		
+        public void actionPerformed(java.awt.event.ActionEvent evt) {		
+        		jButton1ActionPerformed(evt);		
+        }		
+        });
         jButton2.setFont(new java.awt.Font("Marker Felt", 0, 36)); // NOI18N
         jButton2.setText("Back to Mode Selected");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -126,6 +132,20 @@ public class EndingWinFrame extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+    
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    		if(Difficultyselected1.mode.getMode().equals("newbie")) {
+    			OnePlayerNewbieMode.Game.main();
+    		}
+    		else if(Difficultyselected1.mode.getMode().equals("casual")) {
+    			OnePlayerCasualMode.Game.main();
+    		}
+    		else if(Difficultyselected1.mode.getMode().equals("insane")) {
+    			OnePlayerInsaneMode.Game.main();
+    		}
+    		this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
