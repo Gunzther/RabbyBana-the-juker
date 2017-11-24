@@ -3,6 +3,9 @@ package OnePlayerInsaneMode;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
+import OnePlayerInsaneMode.Game;
+
+
 public class Player extends Rectangle {
 
 	private static final long serialVersionUID = 1L;
@@ -32,8 +35,8 @@ public class Player extends Rectangle {
 			y += speed;
 		}
 		
-		Level level = Game.level;
-		Bot en = Game.enemy;
+		Level level = OnePlayerInsaneMode.Game.level;
+		Bot en = OnePlayerInsaneMode.Game.enemy;
 		
 		for(int i = 0;i < level.item.size();i++){
 			if(this.intersects(level.item.get(i))){
@@ -45,7 +48,7 @@ public class Player extends Rectangle {
 						speed = 2;
 				}
 				else if(level.rand == 2) {
-						en.speedE = 8;
+						en.speedE = 10;
 				}
 				else if(level.rand == 3) {
 						en.speedE = 2;
@@ -64,14 +67,15 @@ public class Player extends Rectangle {
 			}
 		}
 		
-			Bot enemy = Game.enemy;
+			Bot enemy = OnePlayerInsaneMode.Game.enemy;
 			if(enemy.intersects(this)) {
-				System.exit(1);
+				OnePlayerInsaneMode.Game.resultCS.setResult(1);
+                return;
 			}
 			if(timePlayer == 60*2) {
 				timePlayer = 0;
 				speed = 4;
-				en.speedE = 6;
+				en.speedE = 8;
 			}
 			if(timeSize == 60*4) {
 				playerSize = 30;
@@ -83,7 +87,7 @@ public class Player extends Rectangle {
 	
 	private boolean canMove(int nextX,int nextY){
 		Rectangle bounds = new Rectangle(nextX,nextY,width,height);
-		Level level = Game.level;
+		Level level = OnePlayerInsaneMode.Game.level;
 		
 		for(int xx = 0;xx < level.tiles.length;xx++){
 			for(int yy = 0;yy < level.tiles[0].length;yy++){
@@ -98,7 +102,8 @@ public class Player extends Rectangle {
 	}
 
 	public void render(Graphics g) {
-		BotSheet sheet = Game.playerSheet;
+		BotSheet sheet = OnePlayerInsaneMode.Game.playerSheet;
 		g.drawImage(sheet.getBot(0, 0), x, y, playerSize, playerSize, null);
 	}
 }
+

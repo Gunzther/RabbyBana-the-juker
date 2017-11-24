@@ -18,8 +18,8 @@ public class Bot extends Rectangle{
 	private int targetTime = 60*1;
 	
 	public Random randomGen;
-	public int speedE = 6;
-	public int enemySize = 30;
+	public int speedE = 8;
+	public int enemySize = 32;
 	public int timeSizeEn = 0;
 
 	public Bot(int x ,int y){
@@ -40,7 +40,7 @@ public class Bot extends Rectangle{
 		
 		else if(state == smart){ //follow the player
 			boolean move = false;
-			 if(x < Game.player.x) { 
+			 if(x < Game.player.x) {
 				 if(canMove(x+speedE, y)) {
 					 x+=speedE;
 					 move = true;
@@ -227,3 +227,4 @@ public class Bot extends Rectangle{
 	}
 	
 }
+
