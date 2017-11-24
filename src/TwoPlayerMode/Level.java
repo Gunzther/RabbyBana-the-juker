@@ -80,7 +80,6 @@ public class Level {
 	}
 	
 	public void tick(){
-//		Game.enemy.tick();
 		time++;
 		timeItem++;
 		gameTime++;
@@ -89,8 +88,6 @@ public class Level {
 	}
 	
 	public void render(Graphics g){
-			
-//			Game.enemy.render(g);
 			
 			if(secTime >= 0 && secTime < 60*1) {
 				for(int xx = 0;xx < width;xx++){

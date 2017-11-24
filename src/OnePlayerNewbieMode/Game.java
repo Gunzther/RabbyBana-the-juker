@@ -168,6 +168,7 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		 
 		 if(resultCS.getResult() == 1) {
 			 new EndingLoseFrame().setVisible(true);
+			 frame.dispose();
 			 Sound coin = TinySound.loadSound("/sound/lose.wav");
 	         for (int i = 0; i < 1; i++) {
 	        	 	coin.play();
@@ -179,6 +180,7 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		 
 		 else if(resultCS.getResult() == 2) {
 			 new EndingWinFrame().setVisible(true);
+			 frame.dispose();
 			 Sound coin = TinySound.loadSound("/sound/win.wav");
 	         for (int i = 0; i < 2; i++) {
 	        	 	coin.play();
