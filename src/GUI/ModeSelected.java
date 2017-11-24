@@ -15,8 +15,9 @@ public class ModeSelected extends javax.swing.JFrame {
      * Creates new form ModeSelected1
      */
     public ModeSelected() {
+    		
         initComponents();
-         this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -106,6 +107,7 @@ public class ModeSelected extends javax.swing.JFrame {
     }//GEN-LAST:event_singleplayerActionPerformed
 
     private void twoplayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoplayerActionPerformed
+    		Difficultyselected1.mode = new Mode("twoPlayer");
         TwoPlayerMode.Game.main();
     }//GEN-LAST:event_twoplayerActionPerformed
 

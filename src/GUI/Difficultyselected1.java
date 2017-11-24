@@ -12,6 +12,7 @@ package GUI;
 public class Difficultyselected1 extends javax.swing.JFrame {
 	
 	private int result;
+	public static Mode mode;
 
     /**
      * Creates new form Difficultyselected1
@@ -29,6 +30,7 @@ public class Difficultyselected1 extends javax.swing.JFrame {
     public int getResult(){
         return this.result;
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -146,20 +148,21 @@ public class Difficultyselected1 extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    		mode = new Mode("newbie");
         OnePlayerNewbieMode.Game.main();
+        this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    		mode = new Mode("casual");
         OnePlayerCasualMode.Game.main();
         this.dispose();
-        //       if(this.result == 1){
-            //         new Difficultyselected().setVisible(true);
-            //       }
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    	mode = new Mode("insane");
         OnePlayerInsaneMode.Game.main();
-
+        this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed

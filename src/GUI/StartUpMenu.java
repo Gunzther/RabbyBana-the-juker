@@ -1,6 +1,5 @@
 package GUI;
 
-import kuusisto.tinysound.Music;
 import kuusisto.tinysound.TinySound;
 
 /*
@@ -14,8 +13,6 @@ import kuusisto.tinysound.TinySound;
  * @author Smarty
  */
 public class StartUpMenu extends javax.swing.JFrame {
-	
-    
         
     /**
      * Creates new form StartUpMenu
