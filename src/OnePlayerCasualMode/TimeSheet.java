@@ -5,10 +5,10 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
-public class BotSheet {
+public class TimeSheet {
 	
 	private BufferedImage sheet;
-	public BotSheet(String path){
+	public TimeSheet(String path){
 		try {
 			sheet = ImageIO.read(getClass().getResource(path));
 		} catch (IOException e) {
@@ -18,7 +18,7 @@ public class BotSheet {
 	}
 	
 	public BufferedImage getBot(int xx,int yy){
-		return sheet.getSubimage(xx, yy,xx+16,yy+16);
+		return sheet.getSubimage(xx, yy,xx+32,yy+32);
 	}
 }
 

@@ -1,8 +1,10 @@
 package OnePlayerCasualMode;
 
-import GUI.Difficultyselected1;
 import java.awt.Graphics;
 import java.awt.Rectangle;
+
+import OnePlayerCasualMode.Game;
+
 
 public class Player extends Rectangle {
 
@@ -33,8 +35,8 @@ public class Player extends Rectangle {
 			y += speed;
 		}
 		
-		Level level = Game.level;
-		Bot en = Game.enemy;
+		Level level = OnePlayerCasualMode.Game.level;
+		Bot en = OnePlayerCasualMode.Game.enemy;
 		
 		for(int i = 0;i < level.item.size();i++){
 			if(this.intersects(level.item.get(i))){
@@ -65,9 +67,9 @@ public class Player extends Rectangle {
 			}
 		}
 		
-			Bot enemy = Game.enemy;
+			Bot enemy = OnePlayerCasualMode.Game.enemy;
 			if(enemy.intersects(this)) {
-				Game.resultCS.setResult(1);
+				OnePlayerCasualMode.Game.resultCS.setResult(1);
                 return;
 			}
 			if(timePlayer == 60*2) {
@@ -85,7 +87,7 @@ public class Player extends Rectangle {
 	
 	private boolean canMove(int nextX,int nextY){
 		Rectangle bounds = new Rectangle(nextX,nextY,width,height);
-		Level level = Game.level;
+		Level level = OnePlayerCasualMode.Game.level;
 		
 		for(int xx = 0;xx < level.tiles.length;xx++){
 			for(int yy = 0;yy < level.tiles[0].length;yy++){
@@ -100,7 +102,8 @@ public class Player extends Rectangle {
 	}
 
 	public void render(Graphics g) {
-		BotSheet sheet = Game.playerSheet;
+		BotSheet sheet = OnePlayerCasualMode.Game.playerSheet;
 		g.drawImage(sheet.getBot(0, 0), x, y, playerSize, playerSize, null);
 	}
 }
+

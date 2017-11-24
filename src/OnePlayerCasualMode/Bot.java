@@ -24,7 +24,7 @@ public class Bot extends Rectangle{
 
 	public Bot(int x ,int y){
 		randomGen = new Random();
-		setBounds(x,y,32,32);
+		setBounds(x,y,30,30);
 		dir = randomGen.nextInt(4);
 	}
 	
@@ -40,7 +40,7 @@ public class Bot extends Rectangle{
 		
 		else if(state == smart){ //follow the player
 			boolean move = false;
-			 if(x < Game.player.x) { 
+			 if(x < Game.player.x) {
 				 if(canMove(x+speedE, y)) {
 					 x+=speedE;
 					 move = true;
@@ -227,3 +227,4 @@ public class Bot extends Rectangle{
 	}
 	
 }
+
