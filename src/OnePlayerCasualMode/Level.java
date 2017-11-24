@@ -117,15 +117,15 @@ public class Level {
 						}
 					}
 				}
-				min.render(g,0);
+				min.render(g,1);
 			}
 			
-			if(gameTime >= 60*1 && gameTime < 60*30) {
+			if(gameTime >= 60*1 && gameTime < 60*15) {
 				min.render(g,1); 
 				subTime = 0;
 			}
 			
-			if(gameTime >= 60*30 && gameTime < 60*50) {
+			if(gameTime >= 60*15 && gameTime < 60*20) {
 				if(subTime >= 0 && subTime < 30*1) {
 					min.render(g, 2);
 				}
@@ -134,7 +134,7 @@ public class Level {
 				}
 			}
 			
-			if(gameTime >= 60*50 && gameTime <= 60*60) {
+			if(gameTime >= 60*20 && gameTime <= 60*30) {
 				if(subTime >= 0 && subTime < 30*1) {
 					min.render(g, 4);
 				}
@@ -143,7 +143,7 @@ public class Level {
 				}
 			}
 			
-			if(gameTime >= 60*60) {
+			if(gameTime >= 60*30) {
 				min.render(g, 5); 
 				OnePlayerCasualMode.Game.resultCS.setResult(2);
 			}

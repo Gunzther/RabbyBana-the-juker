@@ -37,7 +37,7 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	public static GUI.Difficultyselected1 resultCS;
 	public static JFrame frame;
 	
-	 Music song = TinySound.loadMusic("/sound/chasing-game.wav");
+	public static Music song;
 	
 	public Game() {
 		Dimension dimension = new Dimension(WIDTH, HEIGTH);
@@ -98,6 +98,7 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	
 	public static void main() {
 		Game game = new Game();
+		song = TinySound.loadMusic("/sound/chasing-game.wav");
 		frame = new JFrame();
 		frame.setTitle(Game.TITLE);
 		frame.add(game);
