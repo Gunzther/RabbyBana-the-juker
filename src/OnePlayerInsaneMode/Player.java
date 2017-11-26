@@ -3,9 +3,6 @@ package OnePlayerInsaneMode;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-import OnePlayerInsaneMode.Game;
-
-
 public class Player extends Rectangle {
 
 	private static final long serialVersionUID = 1L;

@@ -13,7 +13,6 @@ import GUI.Difficultyselected1;
 import GUI.EndingWinFrame;
 import GUI.EndingLoseFrame;
 import kuusisto.tinysound.Music;
-import kuusisto.tinysound.Sound;
 import kuusisto.tinysound.TinySound;
 import kuusisto.tinysound.internal.ByteList;
 
