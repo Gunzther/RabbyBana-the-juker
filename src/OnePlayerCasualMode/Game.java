@@ -15,6 +15,7 @@ import GUI.EndingLoseFrame;
 import kuusisto.tinysound.Music;
 import kuusisto.tinysound.Sound;
 import kuusisto.tinysound.TinySound;
+import kuusisto.tinysound.internal.ByteList;
 
 public class Game extends Canvas implements Runnable,KeyListener {
 	
@@ -26,6 +27,7 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	
 	private Thread thread;
 	
+	public static EndingLoseFrame button;
 	public static Player player;
 	public static Bot enemy;
 	public static Map map;
@@ -38,6 +40,8 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	public static JFrame frame;
 	
 	public static Music song;
+	public static Music subSong;
+	public static kuusisto.tinysound.internal.ByteList soundbyte;
 	
 	public Game() {
 		Dimension dimension = new Dimension(WIDTH, HEIGTH);
@@ -55,6 +59,7 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		mapSheet = new MapSheet("/map/newMap.png");
 		resultCS = new Difficultyselected1();
         frame = new JFrame();
+        soundbyte = new ByteList();
 	}
 	
 	public synchronized void start(){
@@ -67,6 +72,7 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	}
 	
 	public synchronized void stop(){
+		soundbyte.clear();
 		frame.dispose();
 		if(!isRunning) return;
 		isRunning = false;
@@ -105,7 +111,6 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		frame.pack();
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setLocationRelativeTo(null);
-		
 		frame.setVisible(true);
 		game.start();
 	}
@@ -170,31 +175,17 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		 if(resultCS.getResult() == 1) {
 			 new EndingLoseFrame().setVisible(true);
 			 frame.dispose();
-			 Sound coin = TinySound.loadSound("/sound/lose.wav");
-	         for (int i = 0; i < 1; i++) {
-	        	 	coin.play();
-	        	 	try {
-	        	 		Thread.sleep(2000);
-	        	 	} catch (InterruptedException e) {}
-	         }
+			 subSong = TinySound.loadMusic("/sound/lose.wav");
+			 subSong.play(true); 
 		 }
 		 
 		 else if(resultCS.getResult() == 2) {
 			 new EndingWinFrame().setVisible(true);
 			 frame.dispose();
-			 Sound coin = TinySound.loadSound("/sound/win.wav");
-	         for (int i = 0; i < 2; i++) {
-	        	 	coin.play();
-	        	 	try {
-	        	 		Thread.sleep(1500);
-	        	 	} catch (InterruptedException e) {}
-	         }
+			 subSong = TinySound.loadMusic("/sound/win.wav");
+			 subSong.play(true); 
 		 }
-
-         
-         
 		stop();
-		
 	}
 }
 

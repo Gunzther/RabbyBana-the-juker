@@ -1,5 +1,7 @@
 package GUI;
 
+import OnePlayerCasualMode.Game;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -13,13 +15,23 @@ package GUI;
 public class EndingLoseFrame extends javax.swing.JFrame {
 	
 	public Mode mode;
+	private int button; 
 
     /**
      * Creates new form Endinglosscasualmode
      */
     public EndingLoseFrame() {
         initComponents();
-         this.setLocationRelativeTo(null);
+        this.setLocationRelativeTo(null);
+        this.button = 1;
+    }
+    
+    public int getButton() {
+    		return this.button;
+    }
+    
+    public void setButton(int button) {
+    		this.button = button;
     }
 
     /**
@@ -121,29 +133,47 @@ public class EndingLoseFrame extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
     		if(Difficultyselected1.mode.getMode().equals("newbie")) {
-    			OnePlayerNewbieMode.Game.main();
-    		}
-    		else if(Difficultyselected1.mode.getMode().equals("casual")) {
-    			OnePlayerCasualMode.Game.main();
-    		}
-    		else if(Difficultyselected1.mode.getMode().equals("insane")) {
-    			OnePlayerInsaneMode.Game.main();
-    		}
+    			OnePlayerNewbieMode.Game.subSong.stop();
+        		OnePlayerNewbieMode.Game.main();
+        	}
+        	else if(Difficultyselected1.mode.getMode().equals("casual")) {
+        		OnePlayerCasualMode.Game.subSong.stop();
+        		OnePlayerCasualMode.Game.main();
+        	}
+        	else if(Difficultyselected1.mode.getMode().equals("insane")) {
+        		OnePlayerInsaneMode.Game.subSong.stop();
+        		OnePlayerInsaneMode.Game.main();
+        	}
     		this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        new ModeSelected().setVisible(true);
-        this.dispose();
+    		if(Difficultyselected1.mode.getMode().equals("newbie")) {
+			OnePlayerNewbieMode.Game.subSong.stop();
+    		}
+    		else if(Difficultyselected1.mode.getMode().equals("casual")) {
+    			OnePlayerCasualMode.Game.subSong.stop();
+    		}
+    		else if(Difficultyselected1.mode.getMode().equals("insane")) {
+    			OnePlayerInsaneMode.Game.subSong.stop();
+    		}
+    		new ModeSelected().setVisible(true);
+    		this.dispose();
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        new StartUpMenu().setVisible(true);
-        this.dispose();
+    		if(Difficultyselected1.mode.getMode().equals("newbie")) {
+			OnePlayerNewbieMode.Game.subSong.stop();
+    		}
+    		else if(Difficultyselected1.mode.getMode().equals("casual")) {
+    			OnePlayerCasualMode.Game.subSong.stop();
+    		}
+    		else if(Difficultyselected1.mode.getMode().equals("insane")) {
+    			OnePlayerInsaneMode.Game.subSong.stop();
+    		}
+    		new StartUpMenu().setVisible(true);
+    		this.dispose();
     }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
