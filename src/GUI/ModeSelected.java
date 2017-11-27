@@ -78,7 +78,7 @@ public class ModeSelected extends javax.swing.JFrame {
         jPanel1.add(jButton8);
         jButton8.setBounds(41, 557, 150, 50);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GifPictures/Modeselected.gif"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GifPictures/modeselected.gif"))); // NOI18N
         jLabel2.setText("jLabel2");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(0, 0, 800, 640);

@@ -5,6 +5,10 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+/**
+*
+* @author KameriiJ
+*/
 public class BotSheet {
 	
 	private BufferedImage sheet;

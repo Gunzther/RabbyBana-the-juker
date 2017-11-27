@@ -1,7 +1,5 @@
 package GUI;
 
-import OnePlayerCasualMode.Game;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -15,23 +13,13 @@ import OnePlayerCasualMode.Game;
 public class EndingLoseFrame extends javax.swing.JFrame {
 	
 	public Mode mode;
-	private int button; 
 
     /**
      * Creates new form Endinglosscasualmode
      */
     public EndingLoseFrame() {
         initComponents();
-        this.setLocationRelativeTo(null);
-        this.button = 1;
-    }
-    
-    public int getButton() {
-    		return this.button;
-    }
-    
-    public void setButton(int button) {
-    		this.button = button;
+         this.setLocationRelativeTo(null);
     }
 
     /**
@@ -45,6 +33,7 @@ public class EndingLoseFrame extends javax.swing.JFrame {
   
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -56,6 +45,8 @@ public class EndingLoseFrame extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Double Feature", 0, 36)); // NOI18N
         jLabel1.setText("Sorry...You lose :(");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(230, 160, 364, 123);
 
         jButton1.setFont(new java.awt.Font("Marker Felt", 0, 36)); // NOI18N
         jButton1.setText("Play Again");
@@ -64,6 +55,8 @@ public class EndingLoseFrame extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(316, 393, 189, 48);
 
         jButton2.setFont(new java.awt.Font("Marker Felt", 0, 36)); // NOI18N
         jButton2.setText("Back to Mode Selected");
@@ -72,6 +65,8 @@ public class EndingLoseFrame extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton2);
+        jButton2.setBounds(226, 459, 351, 48);
 
         jButton3.setFont(new java.awt.Font("Marker Felt", 0, 36)); // NOI18N
         jButton3.setText("Back to Main Menu");
@@ -80,6 +75,13 @@ public class EndingLoseFrame extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton3);
+        jButton3.setBounds(238, 525, 320, 48);
+        
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GifPictures/endWinLoss.gif"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(0, 0, 800, 640);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -134,18 +136,18 @@ public class EndingLoseFrame extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
     		if(Difficultyselected1.mode.getMode().equals("newbie")) {
-    			OnePlayerNewbieMode.Game.subSong.stop();
-        		OnePlayerNewbieMode.Game.main();
-        	}
-        	else if(Difficultyselected1.mode.getMode().equals("casual")) {
-        		OnePlayerCasualMode.Game.subSong.stop();
-        		OnePlayerCasualMode.Game.main();
-        	}
-        	else if(Difficultyselected1.mode.getMode().equals("insane")) {
-        		OnePlayerInsaneMode.Game.subSong.stop();
-        		OnePlayerInsaneMode.Game.main();
-        	}
-    		this.dispose();
+			OnePlayerNewbieMode.Game.subSong.stop();
+    			OnePlayerNewbieMode.Game.main();
+    		}
+    		else if(Difficultyselected1.mode.getMode().equals("casual")) {
+    			OnePlayerCasualMode.Game.subSong.stop();
+    			OnePlayerCasualMode.Game.main();
+    		}
+    		else if(Difficultyselected1.mode.getMode().equals("insane")) {
+    			OnePlayerInsaneMode.Game.subSong.stop();
+    			OnePlayerInsaneMode.Game.main();
+    		}
+		this.dispose();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
@@ -216,6 +218,7 @@ public class EndingLoseFrame extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

@@ -16,6 +16,10 @@ import kuusisto.tinysound.Music;
 import kuusisto.tinysound.TinySound;
 import kuusisto.tinysound.internal.ByteList;
 
+/**
+*
+* @author KameriiJ
+*/
 public class Game extends Canvas implements Runnable,KeyListener {
 	
 	private static final long serialVersionUID = 1L; 
@@ -124,8 +128,6 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		if(e.getKeyCode() == KeyEvent.VK_LEFT)player.left = true;
 		if(e.getKeyCode() == KeyEvent.VK_UP)player.up = true;
 		if(e.getKeyCode() == KeyEvent.VK_DOWN)player.down = true;
-		
-		if(e.getKeyCode() == KeyEvent.VK_ESCAPE) System.exit(1);
 	}
 	
 	@Override
@@ -133,8 +135,7 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		if(e.getKeyCode() == KeyEvent.VK_RIGHT)player.rigth = false;
 		if(e.getKeyCode() == KeyEvent.VK_LEFT)player.left = false;
 		if(e.getKeyCode() == KeyEvent.VK_UP)player.up = false;
-		if(e.getKeyCode() == KeyEvent.VK_DOWN)player.down = false;
-		
+		if(e.getKeyCode() == KeyEvent.VK_DOWN)player.down = false;	
 	}
 	
 	@Override

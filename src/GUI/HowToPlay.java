@@ -1,7 +1,5 @@
 package GUI;
 
-import kuusisto.tinysound.TinySound;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -36,6 +34,7 @@ public class HowToPlay extends javax.swing.JFrame {
         howtoplaylable = new javax.swing.JLabel();
         nextButton = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         jMenu1.setText("jMenu1");
 
@@ -43,10 +42,13 @@ public class HowToPlay extends javax.swing.JFrame {
 
         howToPlayPanel.setPreferredSize(new java.awt.Dimension(800, 640));
         howToPlayPanel.setSize(new java.awt.Dimension(800, 640));
+        howToPlayPanel.setLayout(null);
 
         howtoplaylable.setFont(new java.awt.Font("VitaminTabletE", 0, 48)); // NOI18N
         howtoplaylable.setText("How To Play");
         howtoplaylable.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        howToPlayPanel.add(howtoplaylable);
+        howtoplaylable.setBounds(205, 23, 417, 60);
 
         nextButton.setFont(new java.awt.Font("Marker Felt", 0, 36)); // NOI18N
         nextButton.setText("Next");
@@ -55,6 +57,8 @@ public class HowToPlay extends javax.swing.JFrame {
                 nextButtonActionPerformed(evt);
             }
         });
+        howToPlayPanel.add(nextButton);
+        nextButton.setBounds(609, 557, 150, 50);
 
         jButton1.setFont(new java.awt.Font("Marker Felt", 0, 36)); // NOI18N
         jButton1.setText("Back");
@@ -66,33 +70,13 @@ public class HowToPlay extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        howToPlayPanel.add(jButton1);
+        jButton1.setBounds(41, 557, 150, 50);
 
-        javax.swing.GroupLayout howToPlayPanelLayout = new javax.swing.GroupLayout(howToPlayPanel);
-        howToPlayPanel.setLayout(howToPlayPanelLayout);
-        howToPlayPanelLayout.setHorizontalGroup(
-            howToPlayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(howToPlayPanelLayout.createSequentialGroup()
-                .addContainerGap(205, Short.MAX_VALUE)
-                .addComponent(howtoplaylable)
-                .addGap(178, 178, 178))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, howToPlayPanelLayout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(nextButton, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41))
-        );
-        howToPlayPanelLayout.setVerticalGroup(
-            howToPlayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(howToPlayPanelLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(howtoplaylable, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 474, Short.MAX_VALUE)
-                .addGroup(howToPlayPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nextButton, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GifPictures/Background.png"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        howToPlayPanel.add(jLabel2);
+        jLabel2.setBounds(0, 0, 800, 640);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -159,6 +143,7 @@ public class HowToPlay extends javax.swing.JFrame {
     private javax.swing.JPanel howToPlayPanel;
     private javax.swing.JLabel howtoplaylable;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JButton nextButton;
     // End of variables declaration//GEN-END:variables

@@ -38,8 +38,8 @@ public class StartUpMenu extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         StartButton = new javax.swing.JButton();
-        SettingButton = new javax.swing.JButton();
-        CreditButton = new javax.swing.JButton();
+        Credit = new javax.swing.JButton();
+        exit = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -59,7 +59,7 @@ public class StartUpMenu extends javax.swing.JFrame {
         jLabel4.setFont(new java.awt.Font("Marker Felt", 0, 24)); // NOI18N
         jLabel4.setText("The juker");
         menuPanel.add(jLabel4);
-        jLabel4.setBounds(696, 118, 104, 27);
+        jLabel4.setBounds(680, 120, 104, 27);
 
         jLabel3.setFont(new java.awt.Font("Wingdings 3", 3, 120)); // NOI18N
         jLabel3.setText("C");
@@ -79,29 +79,29 @@ public class StartUpMenu extends javax.swing.JFrame {
             }
         });
         menuPanel.add(StartButton);
-        StartButton.setBounds(77, 312, 213, 64);
+        StartButton.setBounds(70, 300, 213, 64);
 
-        SettingButton.setFont(new java.awt.Font("Marker Felt", 0, 48)); // NOI18N
-        SettingButton.setText("Settings");
-        SettingButton.addActionListener(new java.awt.event.ActionListener() {
+        Credit.setFont(new java.awt.Font("Marker Felt", 0, 48)); // NOI18N
+        Credit.setText("Credit");
+        Credit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                SettingButtonActionPerformed(evt);
+                CreditActionPerformed(evt);
             }
         });
-        menuPanel.add(SettingButton);
-        SettingButton.setBounds(293, 382, 213, 64);
+        menuPanel.add(Credit);
+        Credit.setBounds(280, 370, 213, 64);
 
-        CreditButton.setFont(new java.awt.Font("Marker Felt", 0, 48)); // NOI18N
-        CreditButton.setText("Credit");
-        CreditButton.addActionListener(new java.awt.event.ActionListener() {
+        exit.setFont(new java.awt.Font("Marker Felt", 0, 48)); // NOI18N
+        exit.setText("Exit");
+        exit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                CreditButtonActionPerformed(evt);
+                exitActionPerformed(evt);
             }
         });
-        menuPanel.add(CreditButton);
-        CreditButton.setBounds(508, 452, 213, 64);
+        menuPanel.add(exit);
+        exit.setBounds(510, 440, 213, 64);
 
-        jLabel5.setIcon(new javax.swing.ImageIcon("/Users/Smarty/Desktop/startupmenu.gif")); // NOI18N
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GifPictures/StartUpMenu.gif"))); // NOI18N
         jLabel5.setText("jLabel5");
         jLabel5.setBounds(new java.awt.Rectangle(0, 0, 800, 640));
         jLabel5.setMaximumSize(new java.awt.Dimension(800, 640));
@@ -131,15 +131,14 @@ public class StartUpMenu extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_StartButtonActionPerformed
 
-    private void CreditButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreditButtonActionPerformed
+    private void exitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_exitActionPerformed
+        System.exit(1);
+    }//GEN-LAST:event_exitActionPerformed
+
+    private void CreditActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CreditActionPerformed
         new Credit().setVisible(true);
         this.dispose();
-    }//GEN-LAST:event_CreditButtonActionPerformed
-
-    private void SettingButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SettingButtonActionPerformed
-        new Settings().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_SettingButtonActionPerformed
+    }//GEN-LAST:event_CreditActionPerformed
 
     /**
      * @param args the command line arguments
@@ -178,9 +177,9 @@ public class StartUpMenu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton CreditButton;
-    private javax.swing.JButton SettingButton;
+    private javax.swing.JButton Credit;
     private javax.swing.JButton StartButton;
+    private javax.swing.JButton exit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;

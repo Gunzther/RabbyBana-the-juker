@@ -4,6 +4,10 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.util.Random;
 
+/**
+*
+* @author KameriiJ
+*/
 public class Bot extends Rectangle{
 	
 	private static final long serialVersionUID = 1L;

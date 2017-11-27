@@ -43,6 +43,7 @@ public class Difficultyselected1 extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
@@ -55,6 +56,8 @@ public class Difficultyselected1 extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("VitaminTabletE", 0, 36)); // NOI18N
         jLabel1.setText("Please Select Difficulty");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(162, 68, 501, 36);
 
         jButton1.setFont(new java.awt.Font("Marker Felt", 0, 36)); // NOI18N
         jButton1.setText("Newbie");
@@ -64,6 +67,8 @@ public class Difficultyselected1 extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(330, 270, 142, 48);
 
         jButton2.setFont(new java.awt.Font("Marker Felt", 0, 36)); // NOI18N
         jButton2.setText("Casual");
@@ -73,6 +78,8 @@ public class Difficultyselected1 extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton2);
+        jButton2.setBounds(330, 330, 142, 48);
 
         jButton3.setFont(new java.awt.Font("Marker Felt", 0, 36)); // NOI18N
         jButton3.setText("Insane");
@@ -82,6 +89,8 @@ public class Difficultyselected1 extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton3);
+        jButton3.setBounds(330, 390, 142, 48);
 
         jButton4.setFont(new java.awt.Font("Marker Felt", 0, 36)); // NOI18N
         jButton4.setText("Back");
@@ -91,6 +100,13 @@ public class Difficultyselected1 extends javax.swing.JFrame {
                 jButton4ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton4);
+        jButton4.setBounds(41, 557, 150, 50);
+        
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GifPictures/diffselected.gif"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(0, 0, 800, 640);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -211,6 +227,7 @@ public class Difficultyselected1 extends javax.swing.JFrame {
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton4;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
