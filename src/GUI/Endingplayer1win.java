@@ -1,5 +1,7 @@
 package GUI;
 
+import javax.swing.JLabel;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -12,7 +14,8 @@ package GUI;
  */
 public class Endingplayer1win extends javax.swing.JFrame {
 
-    /**
+    private JLabel jLabel2;
+	/**
      * Creates new form Endingplayer1win
      */
     public Endingplayer1win() {
@@ -34,6 +37,7 @@ public class Endingplayer1win extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -66,6 +70,11 @@ public class Endingplayer1win extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GifPictures/player2win.gif"))); // NOI18N
+        jLabel2.setText("jLabel2");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(0, 0, 800, 640);
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
