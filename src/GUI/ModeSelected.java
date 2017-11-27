@@ -15,8 +15,8 @@ public class ModeSelected extends javax.swing.JFrame {
      * Creates new form ModeSelected1
      */
     public ModeSelected() {
-    		
-        initComponents();
+    		initComponents();
+        this.setTitle("Chasing-Game-SKE");
         this.setLocationRelativeTo(null);
     }
 

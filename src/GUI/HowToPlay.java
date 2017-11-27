@@ -17,6 +17,7 @@ public class HowToPlay extends javax.swing.JFrame {
      */
     public HowToPlay() {
         initComponents();
+        	 this.setTitle("Chasing-Game-SKE");
          this.setLocationRelativeTo(null);
     }
 

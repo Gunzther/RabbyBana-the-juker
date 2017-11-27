@@ -18,6 +18,7 @@ public class StartUpMenu extends javax.swing.JFrame {
      * Creates new form StartUpMenu
      */
     public StartUpMenu() {
+    	 	this.setTitle("Chasing-Game-SKE");
         initComponents();
         this.setLocationRelativeTo(null);
         

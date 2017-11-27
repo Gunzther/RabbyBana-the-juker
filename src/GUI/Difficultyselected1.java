@@ -19,6 +19,7 @@ public class Difficultyselected1 extends javax.swing.JFrame {
      */
     public Difficultyselected1() {
         initComponents();
+        this.setTitle("Chasing-Game-SKE");
         this.setLocationRelativeTo(null);
         this.result = 0;
     }

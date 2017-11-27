@@ -17,6 +17,7 @@ public class Credit extends javax.swing.JFrame {
      */
     public Credit() {
         initComponents();
+         this.setTitle("Chasing-Game-SKE");
          this.setLocationRelativeTo(null);
     }
 

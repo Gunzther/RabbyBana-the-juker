@@ -19,6 +19,7 @@ public class EndingLoseFrame extends javax.swing.JFrame {
      */
     public EndingLoseFrame() {
         initComponents();
+         this.setTitle("Chasing-Game-SKE");
          this.setLocationRelativeTo(null);
     }
 

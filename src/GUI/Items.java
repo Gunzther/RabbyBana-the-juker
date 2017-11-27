@@ -16,6 +16,7 @@ public class Items extends javax.swing.JFrame {
      */
     public Items() {
         initComponents();
+         this.setTitle("Chasing-Game-SKE");
          this.setLocationRelativeTo(null);
     }
 

@@ -18,6 +18,7 @@ public class Endingplayer2win extends javax.swing.JFrame {
      */
     public Endingplayer2win() {
         initComponents();
+         this.setTitle("Chasing-Game-SKE");
          this.setLocationRelativeTo(null);
     }
 
