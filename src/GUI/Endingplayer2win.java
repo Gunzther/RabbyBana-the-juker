@@ -77,7 +77,7 @@ public class Endingplayer2win extends javax.swing.JFrame {
         jPanel1.add(jButton3);
         jButton3.setBounds(238, 525, 320, 48);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GUI/player2win.gif"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GifPictures/player2win.gif"))); // NOI18N
         jLabel2.setText("jLabel2");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(0, 0, 800, 640);
