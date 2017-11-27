@@ -14,7 +14,6 @@ import javax.swing.JLabel;
  */
 public class Endingplayer1win extends javax.swing.JFrame {
 
-    private JLabel jLabel2;
 	/**
      * Creates new form Endingplayer1win
      */
@@ -43,9 +42,13 @@ public class Endingplayer1win extends javax.swing.JFrame {
 
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 640));
         jPanel1.setSize(new java.awt.Dimension(800, 640));
+        jPanel1.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("Zapfino", 0, 36)); // NOI18N
         jLabel1.setText("Player 1 win !!!");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(230, 160, 376, 123);
+       
 
         jButton1.setFont(new java.awt.Font("Marker Felt", 0, 36)); // NOI18N
         jButton1.setText("Play Again");
@@ -54,6 +57,8 @@ public class Endingplayer1win extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(310, 390, 189, 48);
 
         jButton2.setFont(new java.awt.Font("Marker Felt", 0, 36)); // NOI18N
         jButton2.setText("Back to Mode Selected");
@@ -62,6 +67,8 @@ public class Endingplayer1win extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton2);
+        jButton2.setBounds(228, 459, 351, 48);
 
         jButton3.setFont(new java.awt.Font("Marker Felt", 0, 36)); // NOI18N
         jButton3.setText("Back to Main Menu");
@@ -70,8 +77,10 @@ public class Endingplayer1win extends javax.swing.JFrame {
                 jButton3ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton3);
+        jButton3.setBounds(238, 525, 320, 48);
         
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GifPictures/player2win.gif"))); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GifPictures/player1win.gif"))); // NOI18N
         jLabel2.setText("jLabel2");
         jPanel1.add(jLabel2);
         jLabel2.setBounds(0, 0, 800, 640);
@@ -183,6 +192,7 @@ public class Endingplayer1win extends javax.swing.JFrame {
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

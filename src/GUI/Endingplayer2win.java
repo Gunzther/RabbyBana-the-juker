@@ -11,7 +11,8 @@ package GUI;
  * @author Smarty
  */
 public class Endingplayer2win extends javax.swing.JFrame {
-
+	 
+	
     /**
      * Creates new form Endingplayer2win
      */
@@ -40,7 +41,7 @@ public class Endingplayer2win extends javax.swing.JFrame {
 
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 640));
         jPanel1.setSize(new java.awt.Dimension(800, 640));
-        jPanel1.setLayout(null);
+        
 
         jLabel1.setFont(new java.awt.Font("Zapfino", 0, 36)); // NOI18N
         jLabel1.setText("Player 2 win !!!");
