@@ -17,6 +17,7 @@ public class HowToPlay extends javax.swing.JFrame {
      */
     public HowToPlay() {
         initComponents();
+        jTextArea1.setEnabled(false);
         	 this.setTitle("Chasing-Game-SKE");
          this.setLocationRelativeTo(null);
     }
@@ -31,13 +32,39 @@ public class HowToPlay extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenu1 = new javax.swing.JMenu();
+        jDialog1 = new javax.swing.JDialog();
+        jDialog2 = new javax.swing.JDialog();
         howToPlayPanel = new javax.swing.JPanel();
         howtoplaylable = new javax.swing.JLabel();
         nextButton = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
 
         jMenu1.setText("jMenu1");
+
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jDialog2Layout = new javax.swing.GroupLayout(jDialog2.getContentPane());
+        jDialog2.getContentPane().setLayout(jDialog2Layout);
+        jDialog2Layout.setHorizontalGroup(
+            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog2Layout.setVerticalGroup(
+            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -74,10 +101,24 @@ public class HowToPlay extends javax.swing.JFrame {
         howToPlayPanel.add(jButton1);
         jButton1.setBounds(41, 557, 150, 50);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GifPictures/Background.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
-        howToPlayPanel.add(jLabel2);
-        jLabel2.setBounds(0, 0, 800, 640);
+        jTextArea1.setBackground(new java.awt.Color(255, 204, 0));
+        jTextArea1.setColumns(20);
+        jTextArea1.setFont(new java.awt.Font("Avenir Next", 1, 18)); // NOI18N
+        jTextArea1.setRows(5);
+        jTextArea1.append("Single player mode\n\nYou gonna be a banana which is being chased by a rabbit."
+        		+ "\nAll you have to do is to keep your distance from the rabbit \ntil the times run out "
+        		+ "otherwise get caught and game over.\n\nTwo player mode \n\nPlayer one as the banana and "
+        		+ "player two as the rabbit.\nThe player one has to keep distance from player two which is playing "
+        		+ "\nthe rabbit til the times runout but if you are player two(the rabbit) \nyou have to do vice versa .");
+        jScrollPane1.setViewportView(jTextArea1);
+
+        howToPlayPanel.add(jScrollPane1);
+        jScrollPane1.setBounds(90, 130, 630, 380);
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GifPictures/Background.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        howToPlayPanel.add(jLabel1);
+        jLabel1.setBounds(0, 0, 800, 640);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -144,8 +185,12 @@ public class HowToPlay extends javax.swing.JFrame {
     private javax.swing.JPanel howToPlayPanel;
     private javax.swing.JLabel howtoplaylable;
     private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JDialog jDialog1;
+    private javax.swing.JDialog jDialog2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JMenu jMenu1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JButton nextButton;
     // End of variables declaration//GEN-END:variables
 

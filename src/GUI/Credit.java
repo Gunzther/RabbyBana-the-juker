@@ -33,14 +33,23 @@ public class Credit extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setPreferredSize(new java.awt.Dimension(800, 640));
         jPanel1.setSize(new java.awt.Dimension(800, 640));
+        jPanel1.setLayout(null);
 
         jLabel1.setFont(new java.awt.Font("VitaminTabletE", 0, 48)); // NOI18N
         jLabel1.setText("Credit");
+        jPanel1.add(jLabel1);
+        jLabel1.setBounds(305, 36, 215, 48);
 
         jButton1.setFont(new java.awt.Font("Marker Felt", 0, 36)); // NOI18N
         jButton1.setText("Back");
@@ -50,29 +59,38 @@ public class Credit extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton1);
+        jButton1.setBounds(41, 551, 150, 50);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addContainerGap(305, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(280, 280, 280))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(41, 41, 41)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 150, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 467, Short.MAX_VALUE)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39))
-        );
+        jLabel2.setFont(new java.awt.Font("Avenir Next", 1, 24)); // NOI18N
+        jLabel2.setText("Project advisors -> Teacher James Brucker");
+        jPanel1.add(jLabel2);
+        jLabel2.setBounds(79, 134, 492, 33);
+
+        jLabel3.setFont(new java.awt.Font("Avenir Next", 1, 24)); // NOI18N
+        jLabel3.setText("Music software TinySound by finnkuusisto");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(79, 271, 493, 33);
+
+        jLabel4.setFont(new java.awt.Font("Avenir Next", 1, 24)); // NOI18N
+        jLabel4.setText("Background music -> Closer by Maroon 5");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(80, 370, 482, 33);
+
+        jLabel7.setFont(new java.awt.Font("Avenir Next", 1, 24)); // NOI18N
+        jLabel7.setText("Developer -> Korawit Rupanya & Gunthee tawewatmongkol");
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(50, 490, 705, 33);
+
+        jLabel8.setFont(new java.awt.Font("Avenir Next", 1, 24)); // NOI18N
+        jLabel8.setText("Teacher Jitti Niramitranon");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(300, 190, 307, 33);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GifPictures/Background.png"))); // NOI18N
+        jLabel5.setText("jLabel5");
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(0, 0, 800, 640);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -136,6 +154,12 @@ public class Credit extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

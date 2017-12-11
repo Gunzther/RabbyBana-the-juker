@@ -108,6 +108,7 @@ public class ModeSelected extends javax.swing.JFrame {
 
     private void twoplayerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_twoplayerActionPerformed
         TwoPlayerMode.Game.main();
+        this.dispose();
     }//GEN-LAST:event_twoplayerActionPerformed
 
     private void jButton8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton8ActionPerformed

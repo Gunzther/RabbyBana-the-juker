@@ -34,6 +34,17 @@ public class Items extends javax.swing.JFrame {
         jToggleButton1 = new javax.swing.JToggleButton();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -65,12 +76,62 @@ public class Items extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButton1);
-        jButton1.setBounds(41, 557, 150, 50);
+        jButton1.setBounds(46, 557, 150, 50);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GifPictures/Background.png"))); // NOI18N
-        jLabel2.setText("jLabel2");
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BigItems/toffy1.png"))); // NOI18N
         jPanel1.add(jLabel2);
-        jLabel2.setBounds(0, 0, 800, 640);
+        jLabel2.setBounds(103, 161, 42, 80);
+
+        jLabel3.setFont(new java.awt.Font("Avenir Next", 1, 18)); // NOI18N
+        jLabel3.setText("you'll run faster .");
+        jPanel1.add(jLabel3);
+        jLabel3.setBounds(151, 161, 146, 25);
+
+        jLabel4.setFont(new java.awt.Font("Avenir Next", 3, 24)); // NOI18N
+        jLabel4.setText("give you or your opponent some effects for a short time ");
+        jPanel1.add(jLabel4);
+        jLabel4.setBounds(90, 91, 647, 33);
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BigItems/toffy2.png"))); // NOI18N
+        jPanel1.add(jLabel5);
+        jLabel5.setBounds(105, 247, 40, 80);
+
+        jLabel6.setFont(new java.awt.Font("Avenir Next", 1, 18)); // NOI18N
+        jLabel6.setText("you'll run slower .");
+        jPanel1.add(jLabel6);
+        jLabel6.setBounds(151, 247, 154, 25);
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BigItems/toffy3.png"))); // NOI18N
+        jPanel1.add(jLabel7);
+        jLabel7.setBounds(105, 333, 40, 80);
+
+        jLabel8.setFont(new java.awt.Font("Avenir Next", 1, 18)); // NOI18N
+        jLabel8.setText(" your opponent will run slower.");
+        jPanel1.add(jLabel8);
+        jLabel8.setBounds(151, 431, 273, 25);
+
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BigItems/toffy4.png"))); // NOI18N
+        jPanel1.add(jLabel9);
+        jLabel9.setBounds(105, 431, 40, 80);
+
+        jLabel10.setFont(new java.awt.Font("Avenir Next", 1, 18)); // NOI18N
+        jLabel10.setText(" your opponent  will run faster.");
+        jPanel1.add(jLabel10);
+        jLabel10.setBounds(151, 333, 270, 25);
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/BigItems/toffy5.png"))); // NOI18N
+        jPanel1.add(jLabel11);
+        jLabel11.setBounds(471, 161, 41, 80);
+
+        jLabel12.setFont(new java.awt.Font("Avenir Next", 1, 18)); // NOI18N
+        jLabel12.setText("you’ll be smaller.");
+        jPanel1.add(jLabel12);
+        jLabel12.setBounds(518, 161, 148, 25);
+
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/GifPictures/Background.png"))); // NOI18N
+        jLabel13.setText("jLabel13");
+        jPanel1.add(jLabel13);
+        jLabel13.setBounds(0, 0, 800, 640);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -138,7 +199,18 @@ public class Items extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JToggleButton jToggleButton1;
     // End of variables declaration//GEN-END:variables
