@@ -8,6 +8,7 @@ public class Player extends Rectangle {
 	private static final long serialVersionUID = 1L;
 
 	public boolean rigth, left, up, down;
+	public boolean normalToffy;
 	public int speed = 4;
 	private int timePlayer;
 	private int timeSize;
@@ -37,22 +38,37 @@ public class Player extends Rectangle {
 		
 		for(int i = 0;i < level.item.size();i++){
 			if(this.intersects(level.item.get(i))){
+				normalToffy = true;
 				timePlayer = 0;
-				if(level.rand == 0) {
-						speed = 8;
-				}
-				else if(level.rand == 1) {
-						speed = 2;
-				}
-				else if(level.rand == 2) {
-						en.speedE = 10;
-				}
-				else if(level.rand == 3) {
-						en.speedE = 2;
-				}
 				level.item.remove(i);
 				break;
 			}
+		}
+		
+		if((timePlayer >= 0)&&(timePlayer < 2)&& normalToffy) {
+			if(level.rand == 0) {
+				speed = 8;
+			}
+			else if(level.rand == 1) {
+				speed = 2;
+			}
+			else if(level.rand == 2) {
+				en.speedE = 10;
+			}
+			else if(level.rand == 3) {
+				en.speedE = 2;
+			}
+		}
+		
+		if(timePlayer == 60*2) {
+			normalToffy = false;
+			timePlayer = 0;
+			speed = 4;
+			en.speedE = 8;
+		}
+		if(timeSize == 60*4) {
+			playerSize = 30;
+			timeSize = 0;
 		}
 		
 		for(int i = 0;i < level.smallItem.size();i++){
@@ -69,15 +85,7 @@ public class Player extends Rectangle {
 				OnePlayerInsaneMode.Game.resultCS.setResult(1);
                 return;
 			}
-			if(timePlayer == 60*2) {
-				timePlayer = 0;
-				speed = 4;
-				en.speedE = 8;
-			}
-			if(timeSize == 60*4) {
-				playerSize = 30;
-				timeSize = 0;
-			}
+			
 			timeSize++;
 			timePlayer++;
 	}

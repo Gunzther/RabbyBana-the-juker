@@ -101,10 +101,10 @@ public class Level {
 						}
 					}
 				}
-				sec.render(g,0);
+				sec.render(g,45);
 			}
 			
-			if(secTime >= 60*1 && secTime <= 60*2) sec.render(g,gameTime/60);
+			if(secTime >= 60*1 && secTime <= 60*2) sec.render(g,45+gameTime/60);
 			
 			if(secTime == 60*2) secTime = 60*1;
 			
@@ -117,15 +117,9 @@ public class Level {
 						}
 					}
 				}
-				min.render(g,0);
 			}
 			
-			if(gameTime >= 60*1 && gameTime < 60*30) {
-				min.render(g,1); 
-				subTime = 0;
-			}
-			
-			if(gameTime >= 60*30 && gameTime < 60*50) {
+			if(gameTime >= 60*0 && gameTime < 60*5) {
 				if(subTime >= 0 && subTime < 30*1) {
 					min.render(g, 2);
 				}
@@ -134,7 +128,7 @@ public class Level {
 				}
 			}
 			
-			if(gameTime >= 60*50 && gameTime <= 60*60) {
+			if(gameTime >= 60*5 && gameTime < 60*15) {
 				if(subTime >= 0 && subTime < 30*1) {
 					min.render(g, 4);
 				}
@@ -143,14 +137,14 @@ public class Level {
 				}
 			}
 			
-			if(gameTime >= 60*60) {
+			if(gameTime >= 60*15) {
 				min.render(g, 5); 
 				OnePlayerInsaneMode.Game.resultCS.setResult(2);
 			}
 			
 			if(subTime == 60*1) subTime = 0;
 			
-			if(timeItem == 1) {
+			if(timeItem == 60*1) {
 				randomItem = new Random();
 				randNum = randomItem.nextInt(12);
 				randomItem = new Random();
