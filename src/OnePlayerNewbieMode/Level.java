@@ -150,7 +150,7 @@ public class Level {
 			
 			if(subTime == 60*1) subTime = 0;
 			
-			if(timeItem == 1) {
+			if(timeItem == 60*1) {
 				randomItem = new Random();
 				randNum = randomItem.nextInt(12);
 				randomItem = new Random();
