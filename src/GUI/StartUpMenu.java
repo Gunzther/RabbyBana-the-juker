@@ -21,7 +21,6 @@ public class StartUpMenu extends javax.swing.JFrame {
     	 	this.setTitle("Chasing-Game-SKE");
         initComponents();
         this.setLocationRelativeTo(null);
-        
     }
 
     /**
