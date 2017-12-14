@@ -17,22 +17,22 @@ import kuusisto.tinysound.TinySound;
 import kuusisto.tinysound.internal.ByteList;
 
 /**
-*
-* @author KameriiJ
-*/
-public class Game extends Canvas implements Runnable,KeyListener {
-	
-	private static final long serialVersionUID = 1L; 
+ *
+ * @author KameriiJ
+ */
+public class Game extends Canvas implements Runnable, KeyListener {
+
+	private static final long serialVersionUID = 1L;
 	private boolean isRunning = false;
-	
-	public static final int WIDTH = 800,HEIGTH = 640;
+
+	public static final int WIDTH = 800, HEIGTH = 640;
 	public static final String TITLE = "Chasing-Game-SKE";
-	
+
 	private Thread thread;
-	
+
 	public static Player player;
 	public static Bot enemy;
-	public static Map map;
+	public Map map;
 	public static SmallItem small;
 	public static Level level;
 	public static BotSheet enemySheet;
@@ -40,43 +40,45 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	public static MapSheet mapSheet;
 	public static GUI.Difficultyselected1 resultCS;
 	public static JFrame frame;
-	
+
 	public static Music song;
 	public static Music subSong;
 	public static kuusisto.tinysound.internal.ByteList soundbyte;
-	
+
 	public Game() {
 		Dimension dimension = new Dimension(WIDTH, HEIGTH);
 		setPreferredSize(dimension);
 		setMinimumSize(dimension);
 		setMaximumSize(dimension);
-		
+
 		addKeyListener(this);
-		player = new Player(Game.WIDTH/2,Game.HEIGTH/2);
-		enemy = new Bot(Game.WIDTH/2,Game.HEIGTH/2);
-		map = new Map(0,0);
+		player = new Player(Game.WIDTH / 2, Game.HEIGTH / 2);
+		enemy = new Bot(Game.WIDTH / 2, Game.HEIGTH / 2);
+		map = new Map(0, 0);
 		level = new Level("/map/map_chasing2.png");
 		enemySheet = new BotSheet("/bot/tui.png");
 		playerSheet = new BotSheet("/bot/banana2.png");
 		mapSheet = new MapSheet("/map/newMap.png");
 		resultCS = new Difficultyselected1();
-        frame = new JFrame();
-        soundbyte = new ByteList();
+		frame = new JFrame();
+		soundbyte = new ByteList();
 	}
-	
-	public synchronized void start(){
-		if(isRunning) return;
+
+	public synchronized void start() {
+		if (isRunning)
+			return;
 		isRunning = true;
-		
+
 		thread = new Thread(this);
 		thread.start();
-		song.play(true); 
+		song.play(true);
 	}
-	
-	public synchronized void stop(){
+
+	public synchronized void stop() {
 		soundbyte.clear();
 		frame.dispose();
-		if(!isRunning) return;
+		if (!isRunning)
+			return;
 		isRunning = false;
 		try {
 			thread.join();
@@ -84,15 +86,15 @@ public class Game extends Canvas implements Runnable,KeyListener {
 			e.printStackTrace();
 		}
 	}
-	
-	private void tick(){
+
+	private void tick() {
 		player.tick();
 		level.tick();
 	}
-	
-	private void render(){
+
+	private void render() {
 		BufferStrategy bs = getBufferStrategy();
-		if(bs == null){
+		if (bs == null) {
 			createBufferStrategy(3);
 			return;
 		}
@@ -103,7 +105,7 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		g.dispose();
 		bs.show();
 	}
-	
+
 	public static void main() {
 		Game game = new Game();
 		song = TinySound.loadMusic("/sound/chasing-game.wav");
@@ -116,28 +118,36 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		frame.setVisible(true);
 		game.start();
 	}
-	
+
 	@Override
 	public void keyTyped(KeyEvent e) {
-		
+
 	}
-	
+
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if(e.getKeyCode() == KeyEvent.VK_RIGHT)player.rigth = true;
-		if(e.getKeyCode() == KeyEvent.VK_LEFT)player.left = true;
-		if(e.getKeyCode() == KeyEvent.VK_UP)player.up = true;
-		if(e.getKeyCode() == KeyEvent.VK_DOWN)player.down = true;
+		if (e.getKeyCode() == KeyEvent.VK_RIGHT)
+			player.rigth = true;
+		if (e.getKeyCode() == KeyEvent.VK_LEFT)
+			player.left = true;
+		if (e.getKeyCode() == KeyEvent.VK_UP)
+			player.up = true;
+		if (e.getKeyCode() == KeyEvent.VK_DOWN)
+			player.down = true;
 	}
-	
+
 	@Override
 	public void keyReleased(KeyEvent e) {
-		if(e.getKeyCode() == KeyEvent.VK_RIGHT)player.rigth = false;
-		if(e.getKeyCode() == KeyEvent.VK_LEFT)player.left = false;
-		if(e.getKeyCode() == KeyEvent.VK_UP)player.up = false;
-		if(e.getKeyCode() == KeyEvent.VK_DOWN)player.down = false;
+		if (e.getKeyCode() == KeyEvent.VK_RIGHT)
+			player.rigth = false;
+		if (e.getKeyCode() == KeyEvent.VK_LEFT)
+			player.left = false;
+		if (e.getKeyCode() == KeyEvent.VK_UP)
+			player.up = false;
+		if (e.getKeyCode() == KeyEvent.VK_DOWN)
+			player.down = false;
 	}
-	
+
 	@Override
 	public void run() {
 		requestFocus();
@@ -146,45 +156,48 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		long lastTime = System.nanoTime();
 		double targetTick = 60.0;
 		double delta = 0;
-		double ns = 1000000000 / targetTick; 
-		
-		while(isRunning){
+		double ns = 1000000000 / targetTick;
+
+		while (isRunning) {
 			long now = System.nanoTime();
 			delta += (now - lastTime) / ns;
 			lastTime = now;
-			
-			while(delta >= 1){
+
+			while (delta >= 1) {
 				tick();
 				render();
-				if(resultCS.getResult() == 1) break;
-				else if(resultCS.getResult() == 2)break;
+				if (resultCS.getResult() == 1)
+					break;
+				else if (resultCS.getResult() == 2)
+					break;
 				fps++;
 				delta--;
 			}
-			if(resultCS.getResult() == 1) break;
-			else if(resultCS.getResult() == 2)break;
-			if(System.currentTimeMillis() - timer >= 1000){
+			if (resultCS.getResult() == 1)
+				break;
+			else if (resultCS.getResult() == 2)
+				break;
+			if (System.currentTimeMillis() - timer >= 1000) {
 				System.out.println(fps);
 				fps = 0;
 				timer += 1000;
 			}
 		}
-		 song.stop();
-		 
-		 if(resultCS.getResult() == 1) {
-			 new EndingLoseFrame().setVisible(true);
-			 frame.dispose();
-			 subSong = TinySound.loadMusic("/sound/lose.wav");
-			 subSong.play(true);
-		 }
-		 
-		 else if(resultCS.getResult() == 2) {
-			 new EndingWinFrame().setVisible(true);
-			 frame.dispose();
-			 subSong = TinySound.loadMusic("/sound/win.wav");
-			 subSong.play(true); 
-		 }
+		song.stop();
+
+		if (resultCS.getResult() == 1) {
+			new EndingLoseFrame().setVisible(true);
+			frame.dispose();
+			subSong = TinySound.loadMusic("/sound/lose.wav");
+			subSong.play(true);
+		}
+
+		else if (resultCS.getResult() == 2) {
+			new EndingWinFrame().setVisible(true);
+			frame.dispose();
+			subSong = TinySound.loadMusic("/sound/win.wav");
+			subSong.play(true);
+		}
 		stop();
 	}
 }
-

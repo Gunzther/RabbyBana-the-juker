@@ -19,85 +19,82 @@ public class Player extends Rectangle {
 	}
 
 	public void tick() {
-		 
-		if (rigth && canMove(x+speed,y)) {
+
+		if (rigth && canMove(x + speed, y)) {
 			x += speed;
 		}
-		if (left && canMove(x-speed,y)) {
+		if (left && canMove(x - speed, y)) {
 			x -= speed;
 		}
-		if (up && canMove(x, y-speed)) {
+		if (up && canMove(x, y - speed)) {
 			y -= speed;
 		}
-		if (down && canMove(x, y+speed)) {
+		if (down && canMove(x, y + speed)) {
 			y += speed;
 		}
-		
+
 		Level level = OnePlayerNewbieMode.Game.level;
 		Bot en = OnePlayerNewbieMode.Game.enemy;
-		
-		for(int i = 0;i < level.item.size();i++){
-			if(this.intersects(level.item.get(i))){
+
+		for (int i = 0; i < level.item.size(); i++) {
+			if (this.intersects(level.item.get(i))) {
 				normalToffy = true;
 				timePlayer = 0;
 				level.item.remove(i);
 				break;
 			}
 		}
-		
-		if((timePlayer >= 0)&&(timePlayer < 2)&& normalToffy) {
-			if(level.rand == 0) {
+
+		if ((timePlayer >= 0) && (timePlayer < 2) && normalToffy) {
+			if (level.rand == 0) {
 				speed = 8;
-			}
-			else if(level.rand == 1) {
+			} else if (level.rand == 1) {
 				speed = 2;
-			}
-			else if(level.rand == 2) {
+			} else if (level.rand == 2) {
 				en.speedE = 4;
-			}
-			else if(level.rand == 3) {
+			} else if (level.rand == 3) {
 				en.speedE = 1;
 			}
 		}
-		
-		if(timePlayer == 60*2) {
+
+		if (timePlayer == 60 * 2) {
 			normalToffy = false;
 			timePlayer = 0;
 			speed = 4;
 			en.speedE = 2;
 		}
-		if(timeSize == 60*4) {
+		if (timeSize == 60 * 4) {
 			playerSize = 30;
 			timeSize = 0;
 		}
-		
-		for(int i = 0;i < level.smallItem.size();i++){
-			if(this.intersects(level.smallItem.get(i))){
+
+		for (int i = 0; i < level.smallItem.size(); i++) {
+			if (this.intersects(level.smallItem.get(i))) {
 				timeSize = 0;
 				playerSize = 16;
 				level.smallItem.remove(i);
 				break;
 			}
 		}
-		
-			Bot enemy = OnePlayerNewbieMode.Game.enemy;
-			if(enemy.intersects(this)) {
-				OnePlayerNewbieMode.Game.resultCS.setResult(1);
-                return;
-			}
-			
-			timeSize++;
-			timePlayer++;
+
+		Bot enemy = OnePlayerNewbieMode.Game.enemy;
+		if (enemy.intersects(this)) {
+			OnePlayerNewbieMode.Game.resultCS.setResult(1);
+			return;
+		}
+
+		timeSize++;
+		timePlayer++;
 	}
-	
-	private boolean canMove(int nextX,int nextY){
-		Rectangle bounds = new Rectangle(nextX,nextY,width,height);
+
+	private boolean canMove(int nextX, int nextY) {
+		Rectangle bounds = new Rectangle(nextX, nextY, width, height);
 		Level level = OnePlayerNewbieMode.Game.level;
-		
-		for(int xx = 0;xx < level.tiles.length;xx++){
-			for(int yy = 0;yy < level.tiles[0].length;yy++){
-				if(level.tiles[xx][yy] != null){
-					if(bounds.intersects(level.tiles[xx][yy])){
+
+		for (int xx = 0; xx < level.tiles.length; xx++) {
+			for (int yy = 0; yy < level.tiles[0].length; yy++) {
+				if (level.tiles[xx][yy] != null) {
+					if (bounds.intersects(level.tiles[xx][yy])) {
 						return false;
 					}
 				}
@@ -111,4 +108,3 @@ public class Player extends Rectangle {
 		g.drawImage(sheet.getBot(0, 0), x, y, playerSize, playerSize, null);
 	}
 }
-
