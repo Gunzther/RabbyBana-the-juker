@@ -33,7 +33,7 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	public static EndingLoseFrame button;
 	public static Player player;
 	public static Bot enemy;
-	public static Map map;
+	public Map map;
 	public static SmallItem small;
 	public static Level level;
 	public static BotSheet enemySheet;

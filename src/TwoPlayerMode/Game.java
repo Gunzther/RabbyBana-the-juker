@@ -35,7 +35,7 @@ public class Game extends Canvas implements Runnable,KeyListener {
 	
 	public static Player1 player1;
 	public static Player2 player2;
-	public static Map map;
+	public Map map;
 	public static SmallItem small;
 	public static Level level;
 	public static BotSheet player1Sheet;
