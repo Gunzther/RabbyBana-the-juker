@@ -3,6 +3,10 @@ package OnePlayerNewbieMode;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
+/**
+ * This class has the TimeSec object constructor and render the second number.
+ * @author KameriiJ
+ */
 public class TimeSec extends Rectangle {
 
 	private static final long serialVersionUID = 1L;

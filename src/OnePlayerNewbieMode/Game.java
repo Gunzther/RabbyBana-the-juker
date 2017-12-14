@@ -17,7 +17,7 @@ import kuusisto.tinysound.TinySound;
 import kuusisto.tinysound.internal.ByteList;
 
 /**
- *
+ * 
  * @author KameriiJ
  */
 public class Game extends Canvas implements Runnable, KeyListener {

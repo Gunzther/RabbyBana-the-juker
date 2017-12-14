@@ -3,6 +3,18 @@ package OnePlayerNewbieMode;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
+/**
+ * This class has the TimeMin object constructor and render the 6 styles of minute picture.
+ * 1.) black rabbit 01:
+ * 2.) black rabbit 00:
+ * 3.) black rabbit move left 00:
+ * 4.) black rabbit move right 00:
+ * in 10 minute left
+ * 5.) red rabbit move left 00:
+ * 6.) red rabbit move right 00:
+ *  
+ * @author KameriiJ
+ */
 public class TimeMin extends Rectangle {
 
 	private static final long serialVersionUID = 1L;

@@ -4,6 +4,10 @@ import java.awt.Graphics;
 import java.awt.Rectangle;
 import java.util.Random;
 
+/**
+ * Bot class build a rabbit and control its direction to run toward to the player(banana).
+ * @author KameriiJ
+ */
 public class Bot extends Rectangle {
 
 	private static final long serialVersionUID = 1L;
@@ -21,13 +25,20 @@ public class Bot extends Rectangle {
 	public int speedE = 2;
 	public int enemySize = 32;
 	public int timeSizeEn = 0;
-
+	
 	public Bot(int x, int y) {
 		randomGen = new Random();
 		setBounds(x, y, 30, 30);
 		dir = randomGen.nextInt(4);
 	}
-
+	
+	/**
+	 * This method manage the bot direction.
+	 * 1.) Random state - to random the direction in every 7 seconds.
+	 * 2.) Smart state - to make bot follow the player.
+	 * 3.) Find path state - to find the new direction when bot can't move through the wall to the player
+	 *     (dodge the wall).
+	 */
 	public void tick() {
 		if (state == random) {
 			checkMove();
@@ -98,7 +109,10 @@ public class Bot extends Rectangle {
 		}
 		timeSizeEn++;
 	}
-
+	
+	/**
+	 * This void method will find the new direction when bot can't move through the wall to the player
+	 */
 	public void findPath() {
 		if (lastDir.equals("right")) {
 			if (y < Game.player.y) {
@@ -171,7 +185,11 @@ public class Bot extends Rectangle {
 			time = 0;
 		}
 	}
-
+	
+	/**
+	 * This void method check the random direction(right left up or down) that can move or not.
+	 * If the bot can't move, It'll random the new direction.
+	 */
 	public void checkMove() {
 		if (dir == right) {
 			if (canMove(x + speedE, y)) {
@@ -201,7 +219,10 @@ public class Bot extends Rectangle {
 			dir = randomGen.nextInt(4);
 		}
 	}
-
+	
+	/**
+	 * This method check the direction(right left up or down) that can move or not.
+	 */
 	private boolean canMove(int nextX, int nextY) {
 		Rectangle bounds = new Rectangle(nextX, nextY, width, height);
 		Level level = Game.level;
@@ -217,7 +238,7 @@ public class Bot extends Rectangle {
 		}
 		return true;
 	}
-
+	
 	public void render(Graphics g) {
 		g.drawImage(Game.enemySheet.getBot(0, 0), x, y, enemySize, enemySize, null);
 	}
