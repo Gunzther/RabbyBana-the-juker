@@ -17,6 +17,9 @@ import kuusisto.tinysound.TinySound;
 import kuusisto.tinysound.internal.ByteList;
 
 /**
+ * This Game is chasing game in  newbie mode.
+ * In this mode, enemy's speed is slower than player.
+ * A rabbit is the enemy, and a banana is the player.
  * 
  * @author KameriiJ
  */
@@ -86,12 +89,12 @@ public class Game extends Canvas implements Runnable, KeyListener {
 			e.printStackTrace();
 		}
 	}
-
+	
 	private void tick() {
 		player.tick();
 		level.tick();
 	}
-
+	
 	private void render() {
 		BufferStrategy bs = getBufferStrategy();
 		if (bs == null) {
