@@ -5,11 +5,11 @@ by Gunthee Tawewatmongkol ID 6010546915 & Korawit Rupanya ID 6010545684
 - [The introduction.](#the-introduction)
 - [The inspiration](#the-inspiration)
 - [What I use in this application](#how-is-become-this-application)
-- [How to play the game](#get-this-game)
+- [How to play the game](#how-to-play-the-game)
 
 --------------------------------------------------------------------------------------------------------------
 
-##How to play the game
+#How to play the game
 
 ## -Single Player-
 
