@@ -8,6 +8,9 @@ import java.awt.Rectangle;
  * @author KameriiJ
  */
 public class Map extends Rectangle {
+
+	private static final long serialVersionUID = 1L;
+
 	public Map(int x, int y) {
 		setBounds(x, y, 800, 640);
 	}
