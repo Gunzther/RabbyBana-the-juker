@@ -13,8 +13,9 @@ by Gunthee Tawewatmongkol ID 6010546915 & Korawit Rupanya ID 6010545684
 	We use some knowledge that we got from the course like the object,the polymorphism and some other stuff from the internet.
 
 # How to play the game
-	you can download the game and run it on your IDE or by open jar file 
-	Click [here](https://github.com/KameriiJ/Chasing-game-SKE) to get the latest version of this application.
+
+you can download the game and run it on your IDE or by open jar file 
+	Click [here](https://github.com/KameriiJ/Chasing-game-SKE) to get the latest version of this game.
 	Click [here2](https://drive.google.com/open?id=1afX_BI5sK4UPi5P2sqG-Umg3VWb8rsrf)
 
 ## -Single Player-
