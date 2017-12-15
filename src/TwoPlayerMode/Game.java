@@ -20,9 +20,12 @@ import kuusisto.tinysound.Sound;
 import kuusisto.tinysound.TinySound;
 
 /**
-*
-* @author KameriiJ
-*/
+ * This Game is chasing game in two players mode.
+ * In this mode, enemy's speed is equal player's speed.
+ * A rabbit is the player1, and a banana is the player2.
+ * 
+ * @author KameriiJ
+ */
 public class Game extends Canvas implements Runnable,KeyListener {
 	
 	private static final long serialVersionUID = 1L; 

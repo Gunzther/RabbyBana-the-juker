@@ -3,6 +3,11 @@ package TwoPlayerMode;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
+/**
+ * This class has the SmallItem object constructor.
+ * This item will make player or enemy(rabbit) smaller(from 30*30 to 16*16). 
+ * @author KameriiJ
+ */
 public class SmallItem extends Rectangle{
 
 	private static final long serialVersionUID = 1L;

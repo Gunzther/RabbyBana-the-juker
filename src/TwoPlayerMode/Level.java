@@ -9,6 +9,10 @@ import java.util.Random;
 
 import javax.imageio.ImageIO;
 
+/**
+ * This class control most of game functions(wall, items and time).
+ * @author KameriiJ
+ */
 public class Level {
 	
 	public Random randomItem;

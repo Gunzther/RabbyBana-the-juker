@@ -3,7 +3,10 @@ package TwoPlayerMode;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
-
+/**
+ * This class control player2's direction and functions of items.
+ * @author KameriiJ
+ */
 public class Player2 extends Rectangle {
 
 	private static final long serialVersionUID = 1L;
@@ -18,6 +21,14 @@ public class Player2 extends Rectangle {
 		setBounds(x, y, 30, 30);
 	}
 
+	/**
+	 * This method do the player movement(control with keyPressed method in Game class).
+	 * It control the time of function of 5 items.
+	 * 1.) increasing player's speed
+	 * 2.) decreasing player's speed
+	 * 3.) increasing enemy's speed
+	 * 4.) decreasing enemy's speed 
+	 */
 	public void tick() {
 		 
 		if (rigth && canMove(x+speed,y)) {
@@ -79,6 +90,9 @@ public class Player2 extends Rectangle {
 			timePlayer++;
 	}
 	
+	/**
+	 * This method check the direction(right left up or down) that can move or not.
+	 */
 	private boolean canMove(int nextX,int nextY){
 		Rectangle bounds = new Rectangle(nextX,nextY,width,height);
 		Level level = Game.level;
