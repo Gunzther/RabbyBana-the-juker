@@ -17,9 +17,12 @@ import kuusisto.tinysound.TinySound;
 import kuusisto.tinysound.internal.ByteList;
 
 /**
-*
-* @author KameriiJ
-*/
+ * This Game is chasing game in  insane mode.
+ * In this mode, enemy's speed is faster than player.
+ * A rabbit is the enemy, and a banana is the player.
+ * 
+ * @author KameriiJ
+ */
 public class Game extends Canvas implements Runnable,KeyListener {
 	
 	private static final long serialVersionUID = 1L; 

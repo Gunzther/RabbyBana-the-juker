@@ -5,6 +5,10 @@ import java.io.IOException;
 
 import javax.imageio.ImageIO;
 
+/**
+ * This class load time pictures(minute and second).
+ * @author KameriiJ
+ */
 public class TimeSheet {
 	
 	private BufferedImage sheet;
