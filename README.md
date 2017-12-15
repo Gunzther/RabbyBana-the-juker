@@ -42,12 +42,12 @@ by Gunthee Tawewatmongkol ID 6010546915 & Korawit Rupanya ID 6010545684
 
 ## What actually inside this game.
 
-(readmeimage/Screen_Shot_2560-12-15_at_15_32_49.jpg)
-(readmeimage/Screen_Shot_2560-12-15_at_15_33_06.jpg)
-(readmeimage/Screen_Shot_2560-12-15_at_15_33_19.jpg)
-(readmeimage/Screen_Shot_2560-12-15_at_15_33_30.jpg)
-(readmeimage/Screen_Shot_2560-12-15_at_15_33_48.jpg)
-(readmeimage/Screen_Shot_2560-12-15_at_15_34_04.jpg)
+![h1](readmeimage/Screen_Shot_2560-12-15_at_15_32_49.jpg)
+![h2](readmeimage/Screen_Shot_2560-12-15_at_15_33_06.jpg)
+![h3](readmeimage/Screen_Shot_2560-12-15_at_15_33_19.jpg)
+![h4](readmeimage/Screen_Shot_2560-12-15_at_15_33_30.jpg)
+![h5](readmeimage/Screen_Shot_2560-12-15_at_15_33_48.jpg)
+![h6](readmeimage/Screen_Shot_2560-12-15_at_15_34_04.jpg)
 
 
 
