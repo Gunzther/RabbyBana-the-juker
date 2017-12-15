@@ -13,17 +13,14 @@ We get the inspiration from the classic pac-man game.We want to do a game like t
 We use some knowledge that we got from the course like the object,the polymorphism and some other stuff from the internet.
 
 # How to play the game
-<<<<<<< HEAD
 	
 you can download the game and run it on your IDE or by open jar file 
 	Click [here](https://github.com/KameriiJ/Chasing-game-SKE) to get the latest version of this application.
 	Click [here2](https://drive.google.com/open?id=1afX_BI5sK4UPi5P2sqG-Umg3VWb8rsrf)
-=======
 
 you can download the game and run it on your IDE or by open jar file 
     Click [here](https://github.com/KameriiJ/Chasing-game-SKE) to get through the git hup repo.
     Click [here](https://drive.google.com/open?id=1afX_BI5sK4UPi5P2sqG-Umg3VWb8rsrf) to get jar file. (Update 15/12/2017)
->>>>>>> 4ba8d5f3bc91245b0500f24d74b2d8ec5d6cad87
 
 ## -Single Player-
 
