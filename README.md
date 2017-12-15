@@ -5,7 +5,7 @@ by Gunthee Tawewatmongkol ID 6010546915 & Korawit Rupanya ID 6010545684
 - [What is Hilo?](#what-is-hilo-game)
 - [Why I make this game](#why-make-this-game)
 - [What I use in this application](#how-is-become-this-application)
-- [How play the game](#get-this-game)
+- [How to play the game](#get-this-game)
 
 --------------------------------------------------------------------------------------------------------------
 #How to play the game
