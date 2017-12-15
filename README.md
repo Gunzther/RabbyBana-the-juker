@@ -1,6 +1,15 @@
 # Chasing-game-SKE 
 by Gunthee Tawewatmongkol ID 6010546915 & Korawit Rupanya ID 6010545684
 
+**Contents**
+- [What is Hilo?](#what-is-hilo-game)
+- [Why I make this game](#why-make-this-game)
+- [What I use in this application](#how-is-become-this-application)
+- [How play the game](#get-this-game)
+
+--------------------------------------------------------------------------------------------------------------
+#How to play the game
+
 ## -Single Player-
 
     You gonna be a banana which is being chased by a rabbit.
@@ -29,6 +38,17 @@ by Gunthee Tawewatmongkol ID 6010546915 & Korawit Rupanya ID 6010545684
 
 	This item is white.
 	It will make player or enemy(rabbit) smaller(from 30*30 to 16*16).
+
+## What actually inside this game.
+
+(imageReadme/Screen Shot 2560-12-15 at 15.32.49.PNG)
+(imageReadme/Screen Shot 2560-12-15 at 15.33.06.PNG)
+(imageReadme/Screen Shot 2560-12-15 at 15.33.19.PNG)
+(imageReadme/Screen Shot 2560-12-15 at 15.33.30.PNG)
+(imageReadme/Screen Shot 2560-12-15 at 15.33.48.PNG)
+(imageReadme/Screen Shot 2560-12-15 at 15.34.04.PNG)
+
+
 
     
 
