@@ -8,6 +8,7 @@ by Gunthee Tawewatmongkol ID 6010546915 & Korawit Rupanya ID 6010545684
 - [How to play the game](#get-this-game)
 
 --------------------------------------------------------------------------------------------------------------
+
 #How to play the game
 
 ## -Single Player-
