@@ -5,13 +5,13 @@ by Gunthee Tawewatmongkol ID 6010546915 & Korawit Rupanya ID 6010545684
 
     You gonna be a banana which is being chased by a rabbit.
     All you have to do is to keep your distance from the rabbit 
-    til the times run outotherwise get caught and game over.
+    til the times run out otherwise get caught and game over.
 
 ## -Two Players-
 
     Player one as the banana and player two as the rabbit.
     The player one has to keep distance from player two 
-    which is playing the rabbit until the times runout but 
+    which is playing the rabbit until the times run out but 
     if you are player two(the rabbit) you have to do vice versa.
 
 ## Items
