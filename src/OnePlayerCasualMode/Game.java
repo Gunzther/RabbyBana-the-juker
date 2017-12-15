@@ -60,8 +60,8 @@ public class Game extends Canvas implements Runnable,KeyListener {
 		enemy = new Bot(Game.WIDTH/2,Game.HEIGTH/2);
 		map = new Map(0,0);
 		level = new Level("/map/map_chasing2.png");
-		enemySheet = new BotSheet("/bot/tui.png");
-		playerSheet = new BotSheet("/bot/banana2.png");
+		enemySheet = new BotSheet("/pic/tui.png");
+		playerSheet = new BotSheet("/pic/banana2.png");
 		mapSheet = new MapSheet("/map/newMap.png");
 		resultCS = new Difficultyselected1();
         frame = new JFrame();
