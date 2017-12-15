@@ -18,14 +18,14 @@ by Gunthee Tawewatmongkol ID 6010546915 & Korawit Rupanya ID 6010545684
     In the game, the items is toffy that has many different color.
     There are 5 different color.(pink, light-blue, purple, orange and white)
 
-    # Simple items
+   ### Simple items
 
 	1.) pink item - make player faster
  	2.) light blue item - make player slower
  	3.) purple item - make enemy faster
  	4.) orange item - make enemy slower
 
-    # Special items
+  ### Special items
 
 	This item is white.
 	It will make player or enemy(rabbit) smaller(from 30*30 to 16*16).
