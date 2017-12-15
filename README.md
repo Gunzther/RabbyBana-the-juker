@@ -2,14 +2,14 @@
 by Gunthee Tawewatmongkol ID 6010546915 & Korawit Rupanya ID 6010545684
 
 **Contents**
-- [What is Hilo?](#what-is-hilo-game)
-- [Why I make this game](#why-make-this-game)
+- [The introduction.](#the-introduction)
+- [The inspiration](#the-inspiration)
 - [What I use in this application](#how-is-become-this-application)
 - [How to play the game](#get-this-game)
 
 --------------------------------------------------------------------------------------------------------------
 
-#How to play the game
+##How to play the game
 
 ## -Single Player-
 
@@ -42,12 +42,12 @@ by Gunthee Tawewatmongkol ID 6010546915 & Korawit Rupanya ID 6010545684
 
 ## What actually inside this game.
 
-(imageReadme/Screen Shot 2560-12-15 at 15.32.49.PNG)
-(imageReadme/Screen Shot 2560-12-15 at 15.33.06.PNG)
-(imageReadme/Screen Shot 2560-12-15 at 15.33.19.PNG)
-(imageReadme/Screen Shot 2560-12-15 at 15.33.30.PNG)
-(imageReadme/Screen Shot 2560-12-15 at 15.33.48.PNG)
-(imageReadme/Screen Shot 2560-12-15 at 15.34.04.PNG)
+(imageReadme/Screen_Shot_2560-12-15_at_15_32_49.jpg)
+(imageReadme/Screen_Shot_2560-12-15_at_15_33_06.jpg)
+(imageReadme/Screen_Shot_2560-12-15_at_15_33_19.jpg)
+(imageReadme/Screen_Shot_2560-12-15_at_15_33_30.jpg)
+(imageReadme/Screen_Shot_2560-12-15_at_15_33_48.jpg)
+(imageReadme/Screen_Shot_2560-12-15_at_15_34_04.jpg)
 
 
 
