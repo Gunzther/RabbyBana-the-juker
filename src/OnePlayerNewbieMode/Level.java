@@ -9,6 +9,10 @@ import java.util.Random;
 
 import javax.imageio.ImageIO;
 
+/**
+ * This class control most of game functions(wall, items and time).
+ * @author KameriiJ
+ */
 public class Level {
 
 	public Random randomItem;
@@ -42,7 +46,10 @@ public class Level {
 
 	public int[] pixels;
 	public int val;
-
+	
+	/**
+	 * This method specify start points of player and enemy, and build all of the wall. 
+	 */
 	public Level(String path) {
 		item = new ArrayList<>();
 		smallItem = new ArrayList<>();
@@ -79,7 +86,7 @@ public class Level {
 			e.printStackTrace();
 		}
 	}
-
+	
 	public void tick() {
 		Game.enemy.tick();
 		time++;
@@ -88,7 +95,11 @@ public class Level {
 		subTime++;
 		secTime++;
 	}
-
+	
+	/**
+	 * This method render game time picture per second.
+	 * It random items and render item in the random place(every 2 second after the last one remove).
+	 */
 	public void render(Graphics g) {
 
 		Game.enemy.render(g);
