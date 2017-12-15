@@ -3,7 +3,14 @@ package OnePlayerCasualMode;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
+/**
+ * This class has the Map object constructor and render the map that load from MapSheet class(size 800*640).
+ * @author KameriiJ
+ */
 public class Map extends Rectangle{
+	
+	private static final long serialVersionUID = 1L;
+
 	public Map(int x ,int y){
 		setBounds(x,y,800,640);
 	}

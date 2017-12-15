@@ -3,6 +3,15 @@ package OnePlayerCasualMode;
 import java.awt.Graphics;
 import java.awt.Rectangle;
 
+/**
+ * This class has the Items object constructor and render the 4 random items.
+ * 1.) pink item - make player faster
+ * 2.) light blue item - make player slower
+ * 3.) purple item - make enemy faster
+ * 4.) orange item - make enemy slower
+ *  
+ * @author KameriiJ
+ */
 public class Items extends Rectangle{
 
 	private static final long serialVersionUID = 1L;
