@@ -7,9 +7,10 @@ by Gunthee Tawewatmongkol ID 6010546915 & Korawit Rupanya ID 6010545684
 - [What I use in this application](#how-is-become-this-application)
 - [How to play the game](#how-to-play-the-game)
 
-#How to play the game
 
-## -Single Player-
+
+## How to play the game
+##-Single Player-
 
     You gonna be a banana which is being chased by a rabbit.
     All you have to do is to keep your distance from the rabbit 
