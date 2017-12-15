@@ -7,10 +7,10 @@ by Gunthee Tawewatmongkol ID 6010546915 & Korawit Rupanya ID 6010545684
 - [How to play the game](#how-to-play-the-game)
 
 # The inspiration
-	We get the inspiration from the classic pac-man game.We want to do a game like that iconic game so we made it but in our style.
+We get the inspiration from the classic pac-man game.We want to do a game like that iconic game so we made it but in our style.
 
 # What we use in this game
-	We use some knowledge that we got from the course like the object,the polymorphism and some other stuff from the internet.
+We use some knowledge that we got from the course like the object,the polymorphism and some other stuff from the internet.
 
 # How to play the game
 
