@@ -2,14 +2,20 @@
 by Gunthee Tawewatmongkol ID 6010546915 & Korawit Rupanya ID 6010545684
 
 **Contents**
-- [The introduction.](#the-introduction)
 - [The inspiration](#the-inspiration)
-- [What I use in this application](#how-is-become-this-application)
+- [What we use in this game](#what-we-use-in-this-game)
 - [How to play the game](#how-to-play-the-game)
 
+# The inspiration
+	We get the inspiration from the classic pac-man game.We want to do a game like that iconic game so we made it but in our style.
 
+# What we use in this game
+	We use some knowledge that we got from the course like the object,the polymorphism and some other stuff from the internet.
 
 # How to play the game
+	you can download the game and run it on your IDE or by open jar file 
+	Click [here](https://github.com/KameriiJ/Chasing-game-SKE) to get the latest version of this application.
+	Click [here2](
 
 ## -Single Player-
 
